@@ -1,0 +1,528 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    background-color: #f5f5f5;
+    color: #333;
+    /*background-image: url('resources/images/benner_12.jpg'); /* Replace 'path/to/your/background-image.jpg' with the actual path to your image file */
+    background-repeat: repeat; /* You can change this to 'repeat-x' or 'repeat-y' for different patterns */
+    background-size: auto; /* Adjust the size as needed */
+}
+
+.branding {
+    align-items: center;
+    gap: 15px; /* space between logo and your name */
+}
+
+.header-content {
+    position: relative;  /* make sure the header has relative positioning */
+}
+
+.logo {
+    width: 80px; /* increased size from 50px to 80px */
+    height: auto;
+    position: absolute;
+    top: 30%; 
+    left: 10%; /* moved a bit more to the right */
+}
+
+#clock {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    transition: color 0.05s;
+}
+
+/* CSS for Header */
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(45deg, #a74545, #07c198);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Add position relative for pseudo-element */
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('path/to/your/background-image.jpg'); /* Add your background image path */
+    opacity: 0.2; /* Adjust opacity as desired */
+    z-index: -1; /* Place it behind the content */
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+/* CSS for smoother text in the header */
+.header-content {
+    margin-top: 10px; /* Add some top margin to separate from the name */
+}
+.specialties {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the space between each specialty */
+}
+
+.specialty {
+    background-color: rgba(255, 0, 149, 0.1); /* Subtle background, adjust as per your theme */
+    padding: 5px 15px; /* Adjust padding as needed */
+    border-radius: 5px; /* Gives a rounded corner */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for depth */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.specialty:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Darker background on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.header-content p {
+    font-size: 16px; /* Adjust font size as needed for smoother appearance */
+    margin-bottom: 5px; /* Add space between lines */
+    opacity: 0.8; /* Adjust opacity for a subtle effect */
+}
+
+/* CSS for Contact Icons */
+.contact-icons {
+    display: flex;
+    justify-content: center; /* Center-align icons horizontally */
+    align-items: center; /* Center-align icons vertically */
+    margin-top: 10px;
+}
+
+.contact-icons a {
+    color: #fff; /* Set icon color to white */
+    font-size: 24px; /* Increase icon size */
+    margin-right: 15px; /* Adjust spacing between icons */
+    text-decoration: none; /* Remove underlines from icons */
+    transition: color 0.3s; /* Add hover effect for color change */
+}
+
+.contact-icons a:hover {
+    color: #66b3e0; /* Change color on hover (adjust as needed) */
+}
+
+/* CSS for Navigation Bar */
+nav {
+    /*background: linear-gradient(45deg, #333, #603131); /* Replace with the actual background color of your header */
+    /* Add any other styling you want for the navigation bar here */
+    text-align: center;
+    padding-top: 5px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding-top: 5px;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #666;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Style for sections */
+section {
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Style for section headings */
+section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Style for section content */
+section p {
+    font-size: 16px;
+    line-height: 1.5; /* Improve readability with line spacing */
+    margin-bottom: 10px;
+}
+
+/* Style for strong text (e.g., course names, job titles) */
+section strong {
+    font-weight: bold;
+}
+
+/* Add some spacing between sections */
+section + section {
+    margin-top: 30px;
+}
+
+/* CSS for Split Columns */
+.split-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    width: 48%; /* Set to less than 50% to accommodate for spacing */
+    margin-right: 2%; /* Add spacing between columns */
+    background-color: #f9f9f9; /* Subtle background color for projects */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px;
+}
+
+.column p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Clear the margin on the last column to prevent horizontal scroll */
+.column:last-child {
+    margin-right: 0;
+}
+
+/* Employments */
+
+.experience-entry {
+    background-color: #f9f9f9; /* Subtle background color */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px;
+}
+
+.experience-entry p {
+    margin: 0;
+    padding: 2px 0;
+}
+
+.experience-entry a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: smaller;
+    text-decoration: none; /* Remove underlines from links */
+    color: #007BFF !important; /* Set the link color to a blue shade (adjust as needed) */
+    transition: color 0.3s; /* Add a smooth color transition on hover */
+}
+
+.experience-entry a:hover {
+    color: #0056b3 !important; /* Change link color on hover (adjust as needed) */
+}
+
+.employment-type {
+    font-size: 0.8em; /* Smaller font size */
+    color: #555; /* Slightly subdued color */
+    font-style: italic;
+}
+
+.projects {
+    background-color: #f9f9f9; /* Subtle background color for projects */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px;
+}
+/* CSS for Links within <p> tags in the "Projects" section */
+.projects p a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: smaller;
+    text-decoration: none; /* Remove underlines from links */
+    color: #007BFF !important; /* Set the link color to a blue shade (adjust as needed) */
+    font-weight: bold;
+    transition: color 0.3s; /* Add a smooth color transition on hover */
+}
+
+.projects p a:hover {
+    color: #0056b3 !important; /* Change link color on hover (adjust as needed) */
+}
+.projects:hover {
+background-color: rgb(233, 235, 236);
+}
+
+.project-link {
+    text-decoration: none; /* Remove underlines from links */
+    color: inherit; /* Set the link color to a blue shade (adjust as needed) */
+    font-weight: bold;
+    transition: color 0.3s; /* Add a smooth color transition on hover */
+}
+
+.project-link:hover {
+    color: #0056b3; /* Change link color on hover (adjust as needed) */
+}
+
+
+/* CSS for topic tags */
+/* CSS for topic tags */
+/* CSS for topic tags */
+.topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.topics span {
+    background-color: #768a9e; /* Background color for tags */
+    color: #fff; /* Text color for tags */
+    border-radius: 20px; /* Rounded corners for tags */
+    padding: 5px 10px; /* Spacing inside tags */
+    font-size: 12px; /* Increase font size for better visibility */
+}
+
+/* Align tags vertically with the text */
+.topics::before {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+}
+.learn-more-button {
+    display: inline-block;
+    background-color: #007BFF; /* Change this to match your site's theme */
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+    margin-left: auto;
+}
+
+.learn-more-button:hover, .learn-more-button:focus {
+    background-color: #0056b3; /* Darker shade for hover effect */
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Ensure the button stands out */
+section#project-summary {
+    background-color: #f8f9fa; /* Light background to make the button pop */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+/* Individual Project Page */
+/* CSS for unordered list (ul) */
+section ul {
+    list-style: square;
+    padding: 0;
+}
+
+/* CSS for list items (li) */
+section ul li {
+    margin-left: 40px;
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+/* Style for links within list items */
+section ul li a {
+    text-decoration: none;
+    color: #007BFF; /* Set the link color to a blue shade (adjust as needed) */
+    font-weight: bold;
+    transition: color 0.3s; /* Add a smooth color transition on hover */
+}
+
+/* Hover effect for links within list items */
+section ul li a:hover {
+    color: #ffffff; /* Change link color on hover (adjust as needed) */
+}
+
+/* CSS for Links within <p> tags in the "Projects" section */
+section p a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: smaller;
+    text-decoration: none; /* Remove underlines from links */
+    color: #007BFF !important; /* Set the link color to a blue shade (adjust as needed) */
+    font-weight: bold;
+    transition: color 0.3s; /* Add a smooth color transition on hover */
+}
+
+section p a:hover {
+    color: #0056b3 !important; /* Change link color on hover (adjust as needed) */
+}
+
+
+/* CSS for the video container */
+/* CSS for the video container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-top: 30px; /* Adjust for any additional content */
+    height: 0;
+    overflow: hidden;
+    border: 2px solid #007BFF; /* Add a border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+/* Style for the embedded video */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px; /* Match the border radius of the container */
+}
+
+/* Buttons */
+.button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-size: smaller;
+}
+.github { background-color: #333; }
+.github:hover { background-color: #555; }
+.huggingface { background-color: #0061f2; }
+.huggingface:hover { background-color: #0073f7; }
+.streamlit { background-color: #ff4b4b; }
+.streamlit:hover { background-color: #ff6666; }
+.youtube { background-color: #FF0000; }
+.youtube:hover { background-color: #ff3333; }
+.tableau { background-color: #E97627; }
+.tableau:hover { background-color: #EB8A45; }
+.webapp {
+    background-color: #4CAF50; /* Example color */
+}
+.webapp:hover {
+    background-color: #45a049; /* Darker shade for hover effect */
+}
+
+.unavailable {
+    background-color: #A9A9A9;
+}
+.unavailable:hover {
+    background-color: #808080;
+}
+.proposal {
+    background-color: #cce5f2;
+}
+.proposal:hover {
+    background-color: #9bc3d8;
+}
+
+/* Colab Button Styles */
+.colab {
+    background-color: #f9ab00; /* Orange color for Colab */
+}
+
+.colab:hover {
+    background-color: #e0a00e; /* Darker orange for hover effect */
+}
+
+        
+.icon {
+    margin-right: 10px;
+}
+.text {
+    margin-top: 5px;
+}
+
+/*Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(45deg, #333, #2958b5);
+    color: #fff;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+    nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    body {
+        text-align: left;
+    }
+    .logo {
+        display: none;/
+    }
+
+    /* Adjust the starting position of the text */
+    .header-text {
+        margin-top: 70px; /* space equivalent to the height of the logo + some extra spacing */
+    }
+}
+
+
+
+/* tables */
+.table-responsive {
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+table {
+    width: 100%;
+    max-width: 100%; /* Prevent any overflow on the table itself */
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+    white-space: nowrap; /* Prevents cells from wrapping content to the next line */
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td {
+    background-color: #ffffff;
+}
+
+/* Add your own color scheme and styling */

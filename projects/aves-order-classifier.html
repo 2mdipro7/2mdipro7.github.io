@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehrab Mashrafi's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="branding">
+                <img src="..//resources/images/My Logo Gradient.svg" alt="Mehrab's Logo" class="logo"> <!-- Add your logo here -->
+            </div>
+            <h1>Mehrab Mashrafi</h1>
+            <div class="specialties">
+                <p class="specialty">UX</p>
+                <p class="specialty">AI</p>
+                <p class="specialty">DATA</p>
+            </div>
+            <!-- Place this in the body of your HTML where you want the clock to appear -->
+            <div id="clock">Loading time...</div>
+            <div class="contact-icons">
+                <a href="https://github.com/2mdipro7" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/2mdipro7" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/dipro7mufc" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:mm4mashrafi@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/+8801646302935" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="https://calendly.com/2mdipro7" target="_blank">Meet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="../index.html"  style="color: #333; margin-left: 20px;"><i class="fas fa-arrow-left fa-2x"></i></a>
+
+        <section class="project-details">
+            <h1>Avian Odyssey: A Revolution in Bird Classification with AI</h1>
+                <p class="topics">
+                    Topics Covered:
+                    <span>Data Collection</span>
+                    <span>Data Preprocessing</span>
+                    <span>Image Augmentation</span>
+                    <span>Transfer Learning</span>
+                    <span>Computer Vision</span>
+                    <span>Machine Learning</span>
+                </p>    
+            <p>
+                The vast diversity of bird species within the Aves class of the Animal Kingdom has long fascinated scientists and naturalists alike. Traditionally, the classification of birds has relied on meticulous examination of physical attributes, ranging from size and coloration to dietary habits and ecological niches. This age-old practice has formed the foundation of our understanding of avian biodiversity.
+            </p>
+            <p>
+                In an era where artificial intelligence (AI) has revolutionized numerous domains, we find ourselves presented with a unique opportunity. What if we could harness the power of AI to enhance our ability to classify and identify birds within this rich tapestry of avian life?
+            </p>
+            <p>
+                This project seeks to address this question by endeavoring to construct an innovative image classifier model capable of recognizing any bird species on Earth, categorizing them according to their respective orders. In the realm of ornithology, there are a total of 42 distinct orders within the avian class, each order representing a fascinating mosaic of avian diversity, distinct from the others in various ways. This ambitious project aims to harness the capabilities of AI and machine learning to create a tool that not only simplifies the classification process but also opens new avenues for research and understanding within the field of ornithology.
+            </p>
+            <section class="project-links" style="border-bottom: none;">
+                <ul style="list-style: none; margin-left: -60px;">
+                    <li>
+                        <a class="button github" href="https://github.com/2mdipro7/aves-order-classifier" target="_blank">
+                            <i class="fab fa-github icon"></i>GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button huggingface" href="https://huggingface.co/spaces/dipro7/aves-order-classifier" target="_blank">
+                            <i class="fas fa-robot icon"></i>HuggingFace Space
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button streamlit" href="https://2mdipro7.github.io/aves-order-classifier/" target="_blank">
+                            <i class="fas fa-external-link-alt icon"></i>Web App
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="project-video">
+            <h2>Project Presentation Video</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/aUFeUa9xrOw" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Data Collection Section -->
+        <section>
+            <h2>Data Collection</h2>
+            <article id="data-sources">
+                <h3>Data Sources</h3>
+                <p>
+                    The dataset used for training the model consists a total of 12,600 bird images, with each order represented by approximately 250-300 images. The images were collected from various sources from the web using the search_images_ddg() function of fastai, and carefully labeled with the corresponding bird order.
+                </p>
+            </article>
+            <ul style="list-style: none; margin-left: -40px;">
+                <li>
+                <a class="button colab" href="https://colab.research.google.com/drive/1h-qdxxIuParMNaTFJZmngqZ-kojjW_tG?usp=sharing" target="_blank">
+                    <i class="fas fa-laptop-code icon"></i>View Data Collection Process
+                </a>
+            </li>
+            </ul>
+            
+        </section>
+
+        <!-- Data Collection Section -->
+        <section>
+            <h2>Data Cleaning & Model Training</h2>
+            <article id="data-sources">
+                <h3>Data Cleaning</h3>
+                <p>
+                    To combat potential biases, we implemented a thoughtful strategy during data collection. Leveraging the versatile search_images_ddg() function of fastai, we carefully selected diverse keywords to download images, transcending the conventional "bird sitting on trees" archetype. By incorporating various positions and behaviors, including "flying bird" and other dynamic scenarios, we aimed to capture a holistic view of each bird species, fostering data consistency and minimizing inherent biases.
+                </p>
+                <p>
+                    The result? An intricately curated dataset, where each order is represented by approximately 250-300 images, ensuring a balanced and comprehensive foundation for our image classifier model. Our commitment to data integrity and inclusivity is embedded in every pixel, setting the stage for a cutting-edge exploration of avian biodiversity through the lens of artificial intelligence.
+                </p>
+                <h3>Iterative Refinement: Enhancing Model Precision</h4>
+                <p>
+                    Following the initial fine-tuning phase of our image classifier model, we embarked on a meticulous journey of iterative refinement to elevate the precision and reliability of our classification system. Recognizing that the devil often resides in the details, we turned our focus to the images causing the most loss to the model.
+                </p>
+                <p>
+                    This process required a careful dissection of misclassified and problematic images. With surgical precision, we identified and rectified misplaced images while discerningly removing unwanted elements that could compromise the model's accuracy. This phase proved to be both time-consuming and challenging, demanding a keen eye for detail and a commitment to the highest standards of quality.
+                </p>
+                <p>
+                    Yet, in the pursuit of excellence, we understood the imperative of this thorough approach. By addressing and rectifying discrepancies at the image level, we fortified the foundation of our model, ensuring that it not only met but exceeded the expectations of precision and reliability. This dedication to fine-tuning, though arduous, stands as a testament to our unwavering commitment to delivering a cutting-edge and robust solution in the realm of avian species classification.
+                </p>
+            </article>
+            <ul style="list-style: none; margin-left: -40px;">
+                <li>
+                <a class="button colab" href="https://colab.research.google.com/drive/1tVWtdZHjHMkCVCv2aIystVrcg8JB1XiH?usp=sharing" target="_blank">
+                    <i class="fas fa-laptop-code icon"></i>View Data Cleaning & Model Training Process
+                </a>
+            </li>
+            </ul>
+
+        </section>
+
+        <section>
+            <h2>Benchmarking: Unveiling Model Performance</h2>
+        
+            <article id="training-details">
+                <h3>Training Details:</h3>
+                <ul>
+                    <li><strong>Batch Size:</strong> 16</li>
+                    <li><strong>Learning Rate:</strong> Not used</li>
+                    <li><strong>Model Freezing:</strong> No</li>
+                    <li><strong>Epochs:</strong> 5</li>
+                </ul>
+            </article>
+        
+            <article id="performance-metrics">
+                <h3>Performance Metrics:</h3>
+                <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Train Loss</th>
+                            <th>Valid Loss</th>
+                            <th>Error Rate</th>
+                            <th>Accuracy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ResNet101</td>
+                            <td>0.295220</td>
+                            <td>0.618716</td>
+                            <td>0.148737</td>
+                            <td>0.851263</td>
+                        </tr>
+                        <tr>
+                            <td>ResNet152</td>
+                            <td>0.352030</td>
+                            <td>0.439929</td>
+                            <td>0.126900</td>
+                            <td>0.873100</td>
+                        </tr>
+                        <tr>
+                            <td>DenseNet201</td>
+                            <td>0.262946</td>
+                            <td>0.570337</td>
+                            <td>0.145833</td>
+                            <td>0.854167</td>
+                        </tr>
+                        <tr>
+                            <td>VGG16</td>
+                            <td>0.899876</td>
+                            <td>0.768018</td>
+                            <td>0.220257</td>
+                            <td>0.779743</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </article>
+        
+            <article id="insights">
+                <h3>Insights:</h3>
+                <ul>
+                    <li><strong>Training Loss:</strong> DenseNet201 achieved the lowest training loss (0.262946), indicating an excellent fit to the training data. ResNet101 (0.295220) and ResNet152 (0.352030) demonstrated commendable performance in terms of training loss. VGG16 had the highest training loss (0.899876), suggesting potential challenges in fitting the training data.</li>
+                    <li><strong>Validation Loss:</strong> ResNet152 obtained the lowest validation loss (0.439929), showcasing strong generalization to unseen data. ResNet101 (0.618716) and DenseNet201 (0.570337) also performed reasonably well in terms of validation loss. VGG16 had the highest validation loss (0.768018), suggesting potential overfitting.</li>
+                    <li><strong>Error Rate:</strong> ResNet152 had the lowest error rate (0.126900), demonstrating superior accuracy on the validation data. ResNet101 (0.148737) and DenseNet201 (0.145833) also exhibited low error rates, indicating strong predictive performance. VGG16, despite having a higher training and validation loss, still achieved a reasonable error rate of 0.220257.</li>
+                    <li><strong>Accuracy:</strong> ResNet152 achieved the highest accuracy (0.873100), indicating its effectiveness in correctly classifying data instances. DenseNet201 (0.854167) and ResNet101 (0.851263) also demonstrated high accuracy levels, though slightly lower than ResNet152. VGG16, despite its higher losses, still managed to achieve an accuracy of 0.779743.</li>
+                </ul>
+            </article>
+        </section>
+        
+        <section>
+            <h2>Discussions</h2>
+        
+            <article id="overall-performance">
+                <h3>Overall Performance</h3>
+                <p>
+                    Overall, ResNet152 emerges as the top-performing model in terms of accuracy, error rate, and validation loss. It shows a strong ability to generalize and make accurate predictions on unseen data. However, it's essential to consider other factors, such as model complexity, training time, and resource constraints, when selecting the most suitable model for a specific application.
+                </p>
+            </article>
+        
+            <article id="resnet101">
+                <h3>ResNet101</h3>
+                <p>
+                    ResNet101, while not the highest in accuracy, provides a good balance between model performance and potential overfitting concerns. It may be favored if there are limitations on computational resources or if avoiding overfitting is a primary concern.
+                </p>
+            </article>
+        
+            <article id="densenet201">
+                <h3>DenseNet201</h3>
+                <p>
+                    DenseNet201 also performs well and can be a solid choice, particularly if computational resources are available.
+                </p>
+            </article>
+        
+            <article id="vgg16">
+                <h3>VGG16</h3>
+                <p>
+                    VGG16, while providing reasonable results, seems to struggle more with generalization, as indicated by its high validation loss relative to other models.
+                </p>
+            </article>
+        
+        </section>
+        
+        <section>
+            <h2>Selected Model</h2>
+        
+            <article id="selected-model-details">
+                <h3>Model Selection: ResNet101</h3>
+                <p>
+                    Upon considering our benchmarking results, the classification model used in this project is ResNet101, a deep convolutional neural network known for its excellent performance in image classification tasks. The model has been pre-trained on a large dataset and fine-tuned on the bird image dataset to improve its accuracy and ability to classify bird orders.
+                </p>
+            </article>
+        
+            <article id="performance-metrics">
+                <h3>Performance Metrics</h3>
+                <p>
+                    The model shows improvement in terms of decreasing loss, error rate, and increasing accuracy as the training progresses. These initial results indicate that the model was learning and becoming more accurate in classifying the bird orders.
+                </p>
+                <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Epoch</th>
+                            <th>Train Loss</th>
+                            <th>Valid Loss</th>
+                            <th>Error Rate</th>
+                            <th>Accuracy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>0.381994</td>
+                            <td>0.207986</td>
+                            <td>0.060047</td>
+                            <td>0.939953</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </article>
+        
+            <article id="promising-performance">
+                <h3>Promising Performance</h3>
+                <p>
+                    The model shows promising performance with a low validation loss, low error rate, and high accuracy. It demonstrates its ability to accurately classify bird species based on the provided dataset.
+                </p>
+            </article>
+        
+        </section>
+        
+        <section>
+            <h2>Conclusion</h2>
+        
+            <article id="project-achievement">
+                <h3>Project Achievement</h3>
+                <p>
+                    In the pursuit of harnessing the power of artificial intelligence for avian classification, our project has achieved a significant milestone. By combining the intricate art of ornithology with cutting-edge technology, we've developed an image classifier using the ResNet101 model, fine-tuned to recognize and classify bird species based on a diverse dataset of 12,600 images spanning 42 distinct orders.
+                </p>
+            </article>
+        
+            <article id="model-evaluation">
+                <h3>Model Evaluation</h3>
+                <p>
+                    Our rigorous benchmarking process revealed ResNet101 as the optimal choice, showcasing superior accuracy, low error rates, and strong generalization capabilities. The model's ability to learn and adapt, as evidenced by decreasing loss and increasing accuracy during training, underscores its effectiveness in classifying bird orders.
+                </p>
+            </article>
+        
+            <article id="future-directions">
+                <h3>Future Directions</h3>
+                <p>
+                    While we celebrate our current achievements, the journey doesn't end here. Future endeavors may involve expanding the dataset, collaborating with ornithologists for further refinement, and exploring advancements in neural network architectures. The application of AI in ornithology opens doors to new realms of understanding and research within the intricate world of avian biodiversity.
+                </p>
+            </article>
+        
+            <article id="impact-and-utility">
+                <h3>Impact and Utility</h3>
+                <p>
+                    The culmination of our efforts is not merely a technical triumph but a tool with tangible implications for ornithological research. Our image classifier, driven by ResNet101, has the potential to streamline bird species identification, contributing to conservation efforts, ecological studies, and fostering a deeper appreciation for the diverse tapestry of avian life.
+                </p>
+            </article>
+        
+        </section>
+        
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Mehrab Mashrafi</p>
+    </footer>
+    <script src="../js/clock.js">
+    </script>
+</body>

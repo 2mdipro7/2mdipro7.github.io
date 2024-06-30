@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehrab Mashrafi's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="branding">
+                <img src="..//resources/images/My Logo Gradient.svg" alt="Mehrab's Logo" class="logo"> <!-- Add your logo here -->
+            </div>
+            <h1>Mehrab Mashrafi</h1>
+            <div class="specialties">
+                <p class="specialty">UX</p>
+                <p class="specialty">AI</p>
+                <p class="specialty">DATA</p>
+            </div>
+            <!-- Place this in the body of your HTML where you want the clock to appear -->
+            <div id="clock">Loading time...</div>
+            <div class="contact-icons">
+                <a href="https://github.com/2mdipro7" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/2mdipro7" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/dipro7mufc" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:mm4mashrafi@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/+8801646302935" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="https://calendly.com/2mdipro7" target="_blank">Meet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="../index.html"  style="color: #333; margin-left: 20px;"><i class="fas fa-arrow-left fa-2x"></i></a>
+
+        <section class="project-details">
+            <h1>Mammal World - AI for Wildlife Conservation in the Indian Subcontinent</h1>
+                <p class="topics">
+                    Topics Covered:
+                    <span>Data Scraping</span>
+                    <span>Data Preprocessing</span>
+                    <span>Data Cleaning</span>
+                    <span>Deep Learning</span>
+                    <span>Computer Vision</span>
+                    <span>Machine Learning</span>
+                </p>    
+            <p>
+                The Indian subcontinent is blessed with a diverse range of mammal species, each contributing to the region's rich biodiversity. However, wildlife conservation faces significant challenges, including the need for efficient species identification, behavior understanding, and habitat preservation. Our project addresses these challenges by harnessing AI technology to aid in wildlife conservation efforts.
+            </p>
+            <section class="project-links" style="border-bottom: none;">
+                <ul style="list-style: none; margin-left: -60px;">
+                    <li>
+                        <a class="button github" href="https://github.com/2mdipro7/mammal-world" target="_blank">
+                            <i class="fab fa-github icon"></i>GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button huggingface" href="https://huggingface.co/spaces/dipro7/mammals-of-india" target="_blank">
+                            <i class="fas fa-robot icon"></i>HuggingFace Space
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button streamlit" href="https://mammal-world.streamlit.app/" target="_blank">
+                            <i class="fas fa-external-link-alt icon"></i>Web App
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="project-video">
+            <h2>Project Presentation Video</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bAm37ikyFGY" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Data Collection Section -->
+        <section>
+            <h2>Data Collection</h2>
+            <article id="data-sources">
+                <h3>Data Sources</h3>
+                <p>Our endeavor to support wildlife conservation starts with the meticulous gathering of data. We began by deploying automated scripts using Selenium to scrape comprehensive records of mammal species across the Indian subcontinent from <a href="https://indiabiodiversity.org" target="_blank">indiabiodiversity.org</a>. This critical step helped us to compile a preliminary dataset that serves as the foundation of our project.</p>
+                
+                <p>To enhance the accuracy and reliability of our information, we meticulously cleaned and curated our dataset. Each piece of data was cross-verified against several esteemed and trustworthy web sources, including prominent databases like <a href="https://animaldiversity.org" target="_blank">animaldiversity.org</a>. This rigorous validation process ensures that our dataset meets high standards of veracity and comprehensiveness.</p>
+                
+                <p>In the final stride of our data collection journey, we amassed an extensive gallery of imagery, showcasing 103 mammal species that are native to the Indian subcontinent. This rich visual dataset was curated using advanced web scraping techniques, employing the Google Search Engine API for broad queries and the 'search_images_ddg()' function from Fastai for more focused image retrieval. The resulting compilation of images not only represents the splendor of the region's mammalian diversity but also forms the visual backbone of our AI-driven identification model.</p>
+            </article>
+            <ul style="list-style: none; margin-left: -40px;">
+                <li>
+                <a class="button colab" href="https://colab.research.google.com/drive/1MB6SqMxQL-d7uKEQTw1Bzv22m-Mi1ir7?usp=sharing" target="_blank">
+                    <i class="fas fa-laptop-code icon"></i>View Image Collection Process
+                </a>
+            </li>
+            </ul>
+        </section>
+
+        <!-- Data Cleaning & Augmentation Section -->
+        <section id="data-cleaning-augmentation">
+            <h2>Data Cleaning & Augmentation</h2>
+            <p>The journey of transforming raw data into a refined form suitable for analytical prowess is both intricate and critical. Recognizing this, we embarked on a thorough data cleaning and preprocessing phase, laying the groundwork for sophisticated AI modeling.</p>
+
+            <ul>
+                <li><strong>Organization:</strong> Initially, we orchestrated our images into a finely-tuned hierarchical directory. This not only streamlined the data for efficient processing but also facilitated easier access and management.</li>
+                <li><strong>Scraping Descriptive Data:</strong> Leveraging the power of web scraping, we meticulously extracted detailed text descriptions, taxonomy, and habitat information for each species, enriching our dataset with comprehensive metadata.</li>
+                <li><strong>Augmentation with Nighttime Imagery:</strong> To ensure our AI models' efficacy under various conditions, we expanded our dataset with augmented nighttime images, simulating low-light environments where many of these mammals thrive.</li>
+                <li><strong>Behavioral Annotation:</strong> We went a step further by annotating each image with the behaviors and actions exhibited by the species. This empowers the AI not only to recognize the species but also to understand their behavioral patterns.</li>
+            </ul>
+
+            <p>This meticulous process of data cleaning and augmentation is pivotal, as it directly correlates to the accuracy and reliability of our AI-driven insights, which are instrumental in the conservation of the Indian subcontinent's majestic wildlife.</p>
+        </section>
+
+        <!-- Behavioral Model Section -->
+        <section id="behavioral-model">
+            <h2>Behavioral Model Development</h2>
+            <ul style="list-style: none; margin-left: -40px;">
+                <li>
+                    <a class="button colab" href="https://colab.research.google.com/drive/1blpMrT_71oER3HeUWQiH4xTBsmzeHMhf?usp=sharing" target="_blank">
+                        <i class="fas fa-laptop-code icon"></i>View Behavior Model Training in Colab
+                    </a>
+                </li>                
+            </ul>
+            <p>In the pursuit of creating a more nuanced AI system capable of not just species identification but also behavior prediction, we developed a dedicated behavioral model. This model is a testament to the confluence of domain expertise and advanced machine learning techniques.</p>
+            
+            <p>We chose the ResNet-34 architecture as our foundation, leveraging its deep learning capabilities through transfer learning. This approach allowed us to build upon pre-trained weights, adapting the network to recognize a spectrum of animal behaviors with minimal additional training time and data.</p>
+
+            <p>Once our behavioral model was trained, we applied it to our primary dataset. The model scrutinized each image, predicting behaviors and actions with remarkable accuracy. These predictions were then integrated back into the dataset, enriching it with valuable behavioral insights.</p>
+
+            <p>This enriched dataset serves as the bedrock for our multi-target computer vision model. By incorporating both species identification and behavior prediction, our model stands at the forefront of AI-assisted wildlife conservation, offering a dual advantage in the monitoring and understanding of mammal species in their natural habitats.</p>
+        </section>
+
+        <!-- Main Model Training Section -->
+        <section id="model-training">
+            <h2>Main Model Training</h2>
+            <!-- Colab Button -->
+            <ul style="list-style: none; margin-left: -40px;">
+                <li>
+                <a class="button colab" href="https://colab.research.google.com/drive/1P8kzuABcCqvLawsC9XYHY_KZ9ngt0xj7?usp=sharing" target="_blank">
+                    <i class="fas fa-laptop-code icon"></i>View Final Model Training in Colab
+                </a>
+            </li>
+            </ul>
+            <p>
+                Our machine learning model is built upon the powerful ResNet101 architecture, employing transfer learning to effectively recognize and classify 103 distinct mammal species native to India. The model is designed as a multi-target computer vision system, enabling it to accurately identify various species in diverse conditions and scenarios. With extensive training and fine-tuning, our model serves as a robust tool for biodiversity research and conservation efforts.
+            </p>
+
+            <!-- Final Model Scores Section -->
+                <h3>Final Model Scores</h3>
+                <p>The last epoch of our model training achieved the following scores, showcasing its accuracy and precision in identifying the mammal species and their behavior:</p>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Train Loss</th>
+                                <th>Valid Loss</th>
+                                <th>Accuracy Multi</th>
+                                <th>F1 Score</th>
+                                <th>Precision Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0.020471</td>
+                                <td>0.024824</td>
+                                <td>0.990407</td>
+                                <td>0.735815</td>
+                                <td>0.843947</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </section>
+
+        <!-- Deployment Section -->
+        <section id="deployment">
+            <h2>Deployment</h2>
+            <p>
+                The deployment of our AI model represents a pivotal step in making our wildlife conservation efforts more accessible and impactful. We have successfully deployed our model on the following platforms:
+            </p>
+            <ul>
+                <li>
+                    <strong>Hugging Face:</strong> Our model is hosted on Hugging Face, allowing researchers and conservationists to directly interact with the model through a simple interface. 
+                    <!-- Assuming you have a button style for Hugging Face links, as mentioned earlier -->
+                    <a class="button huggingface" href="https://huggingface.co/spaces/dipro7/mammals-of-india" target="_blank">
+                        <i class="fas fa-external-link-alt icon"></i>View on Hugging Face
+                    </a>
+                </li>
+                <li>
+                    <strong>Streamlit App:</strong> For a more customized and interactive experience, we've also developed a Streamlit app that demonstrates the model's capabilities in real-time.
+                    <!-- Assuming you have a button style for Streamlit links, as mentioned earlier -->
+                    <a class="button streamlit" href="https://mammal-world.streamlit.app/" target="_blank">
+                        <i class="fas fa-external-link-alt icon"></i>Launch Streamlit App
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Future Work Section -->
+        <section id="future-work">
+            <h2>Future Work</h2>
+            <p>
+                Our journey towards enhancing biodiversity conservation through AI is ongoing. We are diligently developing version two of our model, which promises to predict an even broader array of behaviors and identify up to 200 species with improved accuracy.
+            </p>
+            <p>
+                This ambitious upgrade is designed to offer more granular insights and a wider scope for conservationists, researchers, and enthusiasts around the globe. By expanding our dataset and refining our algorithms, we aim to push the boundaries of what's possible in wildlife identification and behavioral analysis using machine learning.
+            </p>
+            <p>
+                Collaboration is at the heart of our progress. If you share our passion for wildlife conservation and have ideas or skills to contribute, we warmly invite you to join our efforts. Please visit our GitHub repository and consider contributing via a pull request.
+            </p>
+            <!-- GitHub Button -->
+            <ul style="list-style: none; margin-left: -40px;">
+                <li>
+                    <a class="button github" href="https://github.com/2mdipro7/mammal-world" target="_blank">
+                        <i class="fab fa-github icon"></i>Contribute on GitHub
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    <footer>
+            <p>&copy; 2024 Mehrab Mashrafi</p>
+    </footer>
+    <script src="../js/clock.js">
+    </script>  
+</body>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehrab Mashrafi's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="branding">
+                <img src="..//resources/images/My Logo Gradient.svg" alt="Mehrab's Logo" class="logo"> <!-- Add your logo here -->
+            </div>
+            <h1>Mehrab Mashrafi</h1>
+            <div class="specialties">
+                <p class="specialty">UX</p>
+                <p class="specialty">AI</p>
+                <p class="specialty">DATA</p>
+            </div>
+            <!-- Place this in the body of your HTML where you want the clock to appear -->
+            <div id="clock">Loading time...</div>
+            <div class="contact-icons">
+                <a href="https://github.com/2mdipro7" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/2mdipro7" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/dipro7mufc" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:mm4mashrafi@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/+8801646302935" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="https://calendly.com/2mdipro7" target="_blank">Meet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="../index.html"  style="color: #333; margin-left: 20px;"><i class="fas fa-arrow-left fa-2x"></i></a>
+
+        <section class="project-details">
+            <h1>Story Genre Classification with Hugging Face Transformers and Fastai</h1>
+            <p class="topics">
+                Topics Covered:
+                <span>Data Scraping</span>
+                <span>Data Preprocessing</span>
+                <span>Data Cleaning</span>
+                <span>Deep Learning</span>
+                <span>NLP (Natural Language Processing)</span>
+                <span>Machine Learning</span>
+                <span>Transfer Learning</span>
+                <span>Language Model</span>
+            </p>                
+            <p>
+                How much do you know about fan made stories? Did you know about the immense world of fan community where non-professional and semi-professional writers alike showcase their writing ability. Well, I found out about it and thought, why not utilize these data to make a NLP classification model that can learn pattern from fan made stories.
+            </p>
+            <p>
+                This project showcases the implementation of multi-label text classification using Hugging Face Transformers and Fastai. It involves training a deep learning model to predict multiple genre labels for text descriptions. Key features include web scraping with Selenium Webdriver, data extraction from Royal Road (a fan-made stories website), utilization of pre-trained transformer models, Fastai's text processing capabilities, performance analysis metrics like F1 score and ROC AUC, and detailed code explanations.
+            </p>
+            <section class="project-links" style="border-bottom: none;">
+                <ul style="list-style: none; margin-left: -60px;">
+                    <li>
+                        <a class="button github" href="https://github.com/2mdipro7/story-genre-classifier" target="_blank">
+                            <i class="fab fa-github icon"></i>GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button huggingface" href="https://huggingface.co/spaces/dipro7/story-genre-classifier" target="_blank">
+                            <i class="fas fa-robot icon"></i>HuggingFace Space
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button streamlit" href="https://story-genre-classifier.onrender.com/" target="_blank">
+                            <i class="fas fa-external-link-alt icon"></i>Web App
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="project-video">
+            <h2>Project Presentation Video</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://youtube.com/embed/GXt4RY_hROw" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>Data Collection: Exploring the World of Fan-Made Stories</h2>
+        
+            <article id="fan-made-stories-intro">
+                <h3>The Cool World of Fan-Made Stories</h3>
+                <p>
+                    In the expansive and captivating world of fan-made stories, a realm where the creativity of non-professional and semi-professional writers intertwines, a vast tapestry of narratives unfolds. The fan community serves as a dynamic platform, allowing writers to showcase their talents and readers to immerse themselves in unique and imaginative tales.
+                </p>
+            </article>
+        
+            <article id="choice-of-data-source">
+                <h3>Choice of Data Source: Royal Road</h3>
+                <p>
+                    For this project, our journey into the cool world of fan-made stories led us to the doorstep of <a href="https://www.royalroad.com/" target="_blank">Royal Road</a>, a prominent website known for hosting a diverse collection of fan-made stories. Here, writers from various backgrounds share their creations, weaving narratives that span across genres and captivate the hearts of readers.
+                </p>
+            </article>
+        
+            <article id="data-collection-process">
+                <h3>Data Collection Process</h3>
+                <ol>
+                    <li>
+                        <strong>Web Scraping with Selenium Webdriver:</strong>
+                        <p>Leveraging the power of Selenium Webdriver, we embarked on a web scraping journey to extract valuable information from Royal Road. Our focus was on gathering story summaries and their corresponding genres, crucial elements for training a multi-label text classification model.</p>
+                    </li>
+                    <li>
+                        <strong>Cover Images Data:</strong>
+                        <p>In addition to the story summaries and genres, we extracted a special kind of data unrelated to the trained model: cover images. During the scraping process, we also opened the cover image for each story. Using real-time K-means clustering techniques, we isolated the 5 dominant color codes for each cover image, adding a unique visual dimension to our dataset.</p>
+                    </li>
+                    <li>
+                        <strong>Ethical Considerations:</strong>
+                        <p>Throughout the data collection process, we maintained a commitment to ethical practices, respecting the terms of use of the Royal Road website and ensuring responsible scraping.</p>
+                    </li>
+                </ol>
+                <ul style="list-style: none; margin-left: -40px;">
+                    <li>
+                    <a class="button github" href="https://github.com/2mdipro7/story-genre-classifier/blob/main/scraper/description_scraper.py" target="_blank">
+                        <i class="fas fa-laptop-code icon"></i>View Data Collection Process
+                    </a>
+                </li>
+                </ul>
+            </article>
+        
+            <article id="outcome">
+                <h3>Outcome</h3>
+                <p>
+                    Our endeavor to explore the cool world of fan-made stories on Royal Road resulted in the creation of a robust dataset. Each story summary, intertwined with its associated genres, and complemented by unique cover image color data, became a comprehensive foundation for our project on multi-label text classification. This dataset, cultivated from the diverse narratives of Royal Road, forms the basis for training a deep learning model capable of predicting multiple genre labels for a given text description.
+                </p>
+            </article>
+        
+        </section>
+        
+        <!-- Model Training -->
+        <section>
+            <h2>Model Training</h2>
+            <article id="data-sources">
+                <h3>Leveraging Pre-trained Transformer Models</h3>
+                <p>
+                    In this project, we harnessed the power of pre-trained transformer models from Hugging Face Transformers to elevate our text classification capabilities. By tapping into these models, we gained access to their extensive knowledge of language and context, allowing us to achieve impressive results in genre classification.
+                </p>
+                <h3>Our Choice: bert-base-uncased Architecture</h3>
+                <p>
+                    For this project, we selected the bert-base-uncased architecture, a well-established variant of BERT that's specifically designed for uncased text. By making this strategic choice, we enabled our model to comprehend the subtleties of language usage, leading to enhanced accuracy and performance in genre classification.
+                </p>
+                <h3>Model Training in model_training.ipynb</h3>
+                <p>Our journey is documented in the model_training.ipynb notebook, where we documented each step of the training process. From preprocessing our data to configuring the model, defining the loss function, selecting optimization strategies, and monitoring training progress, the notebook serves as a comprehensive guide to our approach.</p>
+            </article>
+            <ul style="list-style: none; margin-left: -40px;">
+                <li>
+                <a class="button colab" href="https://colab.research.google.com/drive/19YRcYisO3lOBDeR8BjqGFkYpUABkAqj6?usp=sharing" target="_blank">
+                    <i class="fas fa-laptop-code icon"></i>View Model Training Process
+                </a>
+            </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Model Evaluation and Deployment</h2>
+        
+            <article id="model-evaluation">
+                <h3>Model Evaluation</h3>
+                <p>Here is how our model performed after training for 7 epochs:</p>
+                <div class="table-responsive">
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Score</th>
+                    </tr>
+                    <tr>
+                        <td>Accuracy Multi</td>
+                        <td>0.87</td>
+                    </tr>
+                    <tr>
+                        <td>F1 (Micro)</td>
+                        <td>0.65</td>
+                    </tr>
+                    <tr>
+                        <td>F1 (Macro)</td>
+                        <td>0.52</td>
+                    </tr>
+                    <tr>
+                        <td>ROC AUC (Micro)</td>
+                        <td>0.77</td>
+                    </tr>
+                    <tr>
+                        <td>ROC AUX (Macro)</td>
+                        <td>0.71</td>
+                    </tr>
+                </table>
+                </div>
+                <p>Refer to the <a target="_blank" href="https://github.com/2mdipro7/story-genre-classifier/blob/main/notebooks/NLP_data_cleaning.ipynb">model_evaluation.ipynb</a> notebook for detailed instructions.</p>
+            </article>
+        
+            <article id="convert-model">
+                <h3>Convert Model to ONNX</h3>
+                <p>Convert your trained model to the ONNX format for deployment using the <a target="_blank" href="https://github.com/2mdipro7/story-genre-classifier/blob/main/notebooks/NLP_Model_onnx_inference.ipynb">convert_to_onnx.ipynb</a> notebook.</p>
+            </article>
+        
+            <article id="model-deployment">
+                <h3>Model Deployment</h3>
+                <p>
+                    <strong>Hugging Face:</strong> The model is deployed and accessible on Hugging Face's Model Hub.
+                </p>
+                <ul style="list-style: none; margin-left: -40px;">
+                    <li>
+                        <a class="button huggingface" href="https://huggingface.co/spaces/dipro7/story-genre-classifier" target="_blank">
+                            <i class="fas fa-robot icon"></i>HuggingFace Space
+                        </a>
+                    </li>
+                </ul>
+                <p>
+                    <strong>Render:</strong> Additionally, the model is deployed and hosted on Render, allowing you to interact with it via a web interface.
+                </p>
+                </ul>
+                
+                </ul>
+                <ul style="list-style: none; margin-left: -40px;">
+                    <li>
+                        <a class="button streamlit" href="https://story-genre-classifier.onrender.com/" target="_blank">
+                            <i class="fas fa-external-link-alt icon"></i>Web App
+                        </a>
+                </li>
+                </ul>
+            </article>
+        </section>
+        
+        <section>
+            <h2>Future Work</h2>
+        
+            <article id="cover-data-collection">
+                <h3>Cover Data Collection for Future Insights</h3>
+                <p>Our data collection process went beyond capturing story summaries and genres. In addition to these components, we meticulously gathered cover images and extracted dominant color codes using real-time K-means clustering. This rich source of visual information presents a unique opportunity for future exploration.</p>
+            </article>
+        
+            <article id="next-nlp-model">
+                <h3>Next NLP Model: Predicting Color Codes</h3>
+                <p>Building upon our comprehensive dataset, our future endeavors will delve into the creation of yet another NLP model. This model will be trained to predict appropriate color codes as output, given the text description as input. By leveraging the insights gained from the cover data collection, we aim to develop a tool that not only classifies genres but also enhances the visual representation of fan-made stories.</p>
+            </article>
+        
+            <article id="ongoing-innovation">
+                <h3>Ongoing Innovation and Exploration</h3>
+                <p>As technology evolves and new possibilities emerge, our commitment to innovation remains steadfast. We envision continuous exploration and refinement of models that not only decode the intricate world of text but also contribute to the fusion of language and visuals in storytelling. The journey doesn't end here; it unfolds into a realm of endless possibilities and creative synthesis.</p>
+            </article>
+        
+        </section>
+        
+        <section>
+            <h2>Conclusion</h2>
+        
+            <article id="impact-and-legacy">
+                <h3>Impact and Legacy</h3>
+                <p>Our foray into the world of fan-made stories, powered by advanced natural language processing and machine learning, has culminated in a project with profound implications. The model's performance, boasting an accuracy of 87%, showcases its efficacy in predicting multiple genre labels for text descriptions. This not only streamlines genre classification but also augments the exploration of fan creativity.</p>
+            </article>
+        
+            <article id="deployment-avenues">
+                <h3>Deployment Avenues and Accessibility</h3>
+                <p>The deployment of our model on Hugging Face's Model Hub and Render opens avenues for accessibility and interaction. Whether through seamless inference on Hugging Face or an engaging web interface on Render, users can now leverage our model to navigate the diverse landscape of fan-made stories.</p>
+            </article>
+        
+            <article id="crossroads-of-technology-and-creativity">
+                <h3>Crossroads of Technology and Creativity</h3>
+                <p>This project stands at the crossroads of technology and creativity, with the fusion of text classification and visual exploration. As we celebrate the success of our endeavors, the impact ripples beyond accurate predictions; it extends into the intricate nuances of fan storytelling and the vibrant hues of cover images.</p>
+            </article>
+        
+            <article id="gratitude-and-future-endeavors">
+                <h3>Gratitude and Future Endeavors</h3>
+                <p>We express gratitude to the fan community and the contributors on Royal Road who make this project possible. As we reflect on this accomplishment, our eyes are set on the horizon of future endeavors. The journey continues, marked by ongoing innovation, exploration, and the unwavering pursuit of pushing the boundaries of what technology can achieve in the realms of storytelling.</p>
+            </article>
+        
+        </section>
+        
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Mehrab Mashrafi</p>
+    </footer>
+    <script src="../js/clock.js">
+    </script>
+</body>

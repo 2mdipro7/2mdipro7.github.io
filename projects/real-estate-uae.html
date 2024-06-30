@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehrab Mashrafi's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="branding">
+                <img src="..//resources/images/My Logo Gradient.svg" alt="Mehrab's Logo" class="logo"> <!-- Add your logo here -->
+            </div>
+            <h1>Mehrab Mashrafi</h1>
+            <div class="specialties">
+                <p class="specialty">UX</p>
+                <p class="specialty">AI</p>
+                <p class="specialty">DATA</p>
+            </div>
+            <!-- Place this in the body of your HTML where you want the clock to appear -->
+            <div id="clock">Loading time...</div>
+            <div class="contact-icons">
+                <a href="https://github.com/2mdipro7" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/2mdipro7" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/dipro7mufc" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:mm4mashrafi@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/+8801646302935" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="https://calendly.com/2mdipro7" target="_blank">Meet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="../index.html"  style="color: #333; margin-left: 20px;"><i class="fas fa-arrow-left fa-2x"></i></a>
+
+        <section class="project-details">
+            <h1>Real Estate Market Analysis of UAE</h1>
+            <p class="topics">
+                Topics Covered: <span>Data Scraping</span><span>Data Preprocessing</span><span>Data Cleaning</span><span>Data Segmentation</span><span>GIS</span><span>Tableau</span><span>Market Analysis</span><span>Data Analysis</span>
+            </p>
+            <p>
+                This was a comprehensive data analysis project that involved various stages. We initiated by scraping data from the web, specifically from PropertyFinder.ae. After gathering the data, we meticulously cleaned and organized it using Python. Additionally, we conducted segmentation to enhance our analysis by categorizing the data in various ways. To further enrich our insights, we incorporated GIS (Geographic Information System) data for more in-depth analysis. Finally, we wrapped up the project by creating interactive dashboards to visualize our findings, making the data easily accessible and comprehensible for presentation purposes.
+            </p>
+            <section class="project-links" style="border-bottom: none;">
+                <ul style="list-style: none; margin-left: -60px;">
+                    <li> 
+                        <a class="button github" href="https://github.com/2mdipro7/Real-Estate-Market-Analysis-UAE" target="_blank">
+                            <i class="fab fa-github icon"></i>GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button tableau" href="https://public.tableau.com/app/profile/mehrab.mashrafi/viz/RealEstateMarketAnalysisofUAE/PropertyInsights?publish=yes" target="_blank">
+                            <i class="fas fa-chart-bar icon"></i>Property Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button tableau" href="https://public.tableau.com/app/profile/mehrab.mashrafi/viz/RealEstateMarketAnalysisofUAE/AgentPerformance?publish=yes" target="_blank">
+                            <i class="fas fa-chart-bar icon"></i>Agent & Company Performance Dashboard
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="project-video">
+            <h2>Project Presentation Video</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vqzdI8A64Sc" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>Data Scraping</h2>
+            <p>
+                Step-by-step description of the key tasks and accomplishments are as follows:
+            </p>
+            <ul>
+                <li>Developed a web scraping script to extract property data from PropertyFinder.ae.</li>
+                <li>Gathered property details such as property type, price, area, bedrooms, bathrooms, and location.</li>
+            </ul>
+            <!-- Challenges and Solutions Subsection -->
+            
+                <h3>Challenges</h3>
+                <ul>
+                    <li>The data scraping process was met with several challenges, requiring extensive trial and error to overcome.</li>
+                    <li>Not all the records were returning the same number of indexes, leading to the compromise of entire record rows.</li>
+                    <li>The information in the primary page we were scraping did not have extensive amount of information that we desired.</li>
+                </ul>
+                <h3>Solutions</h3>
+                <p>
+                    To address the challenges, we developed a tailored algorithm that allowed us to handle the data irregularities effectively. We conducted numerous iterations and testing to ensure that the maximum number of rows could be scraped during the process.
+                </p>
+                <p>
+                    Additionally, we incorporated a new tab-opening and tab-closing system within the same script. This innovation enabled us to access information on property pages, facilitating the extraction of property and agent details.
+                </p>
+
+        </section>
+        <section>
+            <h2>Data Preprocessing</h2>
+            <ul style="list-style: none; margin-left: -40px;">
+                <li>
+                <a class="button colab" href="https://colab.research.google.com/drive/1MaQbwFEmH3kwCg2tlpeXIUpBl_MeoE2c?usp=sharing" target="_blank">
+                    <i class="fas fa-laptop-code icon"></i>View Data Preprocessing Process
+                </a>
+            </li>
+            </ul>
+            <p>
+                Step-by-step description of the key tasks and accomplishments are as follows:
+            </p>
+            <ul>
+                <li>Imported the scraped data into Python and loaded it into a pandas DataFrame.</li>
+                <li>Conducted data cleaning, which included handling missing values, removing duplicates, and formatting columns.</li>
+                <li>Performed data transformations and created derived columns to enhance the analysis.</li>
+            </ul>
+            <h3>Challenges</h3>
+            <ul>
+                <li>There were a minimal number of missing values due to the algorithm we created.</li>
+                <li>There was no clear structure of the dataset, so understanding the data initially was challenging.</li>
+            </ul>
+
+            <h3>Solutions</h3>
+            <p>We created a blueprint of how we needed to structure the data, and we decided to convert the dataset into a third normal form. This way, each table would only contain a single element with a primary key. We identified these unique elements in the dataset:</p>
+            <ul>
+                <b>
+                <li>Properties</li>
+                <li>Agents</li>
+                <li>Companies</li>
+                <li>Languages</li>
+                <li>Amenities</li>
+                </b>
+            </ul>
+
+            <h3>1. Data Normalization Process</h3>
+            <p>We organized the raw data into the five unique entities that constitute the core of our dataset. This involved identifying and separating these fundamental elements.</p>
+            <p>Further, we examined the relationships and affiliations of other data with these core entities, aiming to establish clear and structured connections.</p>
+            <p>The outcome of this process was the normalization of a single, complex table into seven distinct tables. Five of these tables represent the original entities, and the remaining two are relational tables that capture the relationships between the core elements.</p>
+
+            <h3>2. Ensuring Data Integrity</h3>
+            <p>With the dataset's structure clarified, we focused on ensuring data integrity and establishing unique primary keys for each table. We systematically examined each table and looked for columns that could serve as primary keys. If none were found, we sought candidate keys to guarantee uniqueness for each row.</p>
+            <p>To facilitate this process, we utilized Python's UID (Unique Identifier) library. This enabled us to generate unique primary keys, ensuring data consistency and referential integrity within the database.</p>
+            <p>By having unique primary keys in place for each table, we gained the flexibility and agility required to advance to subsequent stages of our analysis.</p>
+
+            <h3>3. GIS Data Incorporation</h3>
+            <p>Initially, our dataset lacked clear latitude and longitude data for each property. However, we possessed detailed street addresses for each property listing. To leverage this information, we harnessed the power of Google Maps' API for automated geocoding.</p>
+            <p>Through this process, we were able to automatically generate latitude and longitude data for every property listing in our dataset. This transformation opened up a new dimension of analysis that was previously unavailable to us, enabling more comprehensive geographical insights and visualization.</p>
+
+            <h3>4. Data Segmentation</h3>
+            <p>Following the initial data collection and cleansing phases, we moved on to data segmentation, a crucial step in organizing and categorizing our dataset. Our segmentation strategy revolved around key attributes to enhance analysis:</p>
+            <ul>
+                <li><strong>Price:</strong> We categorized properties based on their price ranges, allowing for targeted insights into the affordability and value of real estate offerings.</li>
+                <li><strong>Area Size:</strong> Properties were segmented by their area sizes, helping us understand the distribution of property sizes across different locations.</li>
+                <li><strong>Location:</strong> With the newly acquired geographical data through GIS incorporation, we grouped properties based on their precise locations. This added a spatial dimension to our analysis, making it easier to identify regional trends and patterns.</li>
+                <li><strong>Posting Date:</strong> We also segmented properties by their posting date, facilitating a temporal analysis to spot trends and changes over time.</li>
+            </ul>
+            <ul style="list-style: none; margin-left: -40px;">
+                <li>
+                <a class="button colab" href="https://colab.research.google.com/drive/1N_BgeG4Ix0D0IcAh1Fwlbnz5PsWPGGho?usp=sharing" target="_blank">
+                    <i class="fas fa-laptop-code icon"></i>View Data Segmentation Process
+                </a>
+            </li>
+            </ul>
+            <p>By applying these segmentation criteria, we gained a deeper understanding of our dataset, which facilitated more targeted analysis and visualization.</p>
+
+        </section>
+
+        <section class="erd-diagram">
+            <h2>Entity-Relationship Diagram (ERD)</h2>
+            <figure>
+            <img src="../resources/images/ERD.svg" alt="ERD Diagram" style="width: 100%;">
+            <figcaption style="text-align: center;">Prepared ERD Model for our dataset</figcaption>
+            </figure>
+            <h3>Why we did this?</h3>
+            <ul>
+                <li><b>Data Structure Clarity:</b> The ERD visually clarified the dataset structure, making it easier to work with.</li>
+                <li><b>Data Normalization:</b> It enabled data normalization, reducing redundancy and ensuring efficiency.</li>
+                <li><b>Data Integrity:</b> The ERD enforced referential integrity, ensuring data consistency and reliability.</li>
+                <li><b>Database Design:</b> It served as the basis for designing a relational database, essential for our analysis.</li>
+                <li><b>Data Analysis Clarity:</b> The ERD enhanced the clarity of data analysis by identifying key entities and their relationships, enabling better insights and decision-making.</li>
+            </ul>
+        </section>
+
+        <section class="interesting-findings">
+            <h2>Interesting Findings:</h2>
+            <ul>
+                <li>There is a general trend toward the availability of expensive properties. We observed a compelling trend indicating a higher abundance of expensive properties. As property values decrease, their availability also declines.</li>
+                <li>Apartments are the predominant property type, followed by villa and townhouse.</li>
+                <li>Jumeirah Village Circle, Downtown Dubai, and Dubai Marina are the best places for finding a property within the lowest price range.</li>
+            </ul>
+            <section class="project-links" style="border-bottom: none;">
+                <ul style="list-style: none; margin-left: -60px;">
+                    <li>
+                        <a class="button tableau" href="https://public.tableau.com/app/profile/mehrab.mashrafi/viz/RealEstateMarketAnalysisofUAE/PropertyInsights?publish=yes" target="_blank">
+                            <i class="fas fa-chart-bar icon"></i>Property Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button tableau" href="https://public.tableau.com/app/profile/mehrab.mashrafi/viz/RealEstateMarketAnalysisofUAE/AgentPerformance?publish=yes" target="_blank">
+                            <i class="fas fa-chart-bar icon"></i>Agent & Company Performance Dashboard
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <p>Please be advised that the dashboards are interactive and there are a many ways insights can be achieved besides these points mentioned above.</p>
+        </section>
+        
+       
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mehrab Mashrafi</p>
+    </footer>
+    <script src="../js/clock.js">
+    </script>
+</body>
