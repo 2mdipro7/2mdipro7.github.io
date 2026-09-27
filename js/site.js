@@ -102,13 +102,14 @@
     function runCount(el) {
         var target = parseInt(el.getAttribute('data-count'), 10);
         var suffix = el.getAttribute('data-suffix') || '';
-        if (reduceMotion || isNaN(target)) { el.textContent = target + suffix; return; }
+        var prefix = el.getAttribute('data-prefix') || '';
+        if (reduceMotion || isNaN(target)) { el.textContent = prefix + target + suffix; return; }
         var start = null, duration = 1100;
         function step(ts) {
             if (!start) start = ts;
             var t = Math.min((ts - start) / duration, 1);
             var eased = 1 - Math.pow(1 - t, 3);
-            el.textContent = Math.round(target * eased) + suffix;
+            el.textContent = prefix + Math.round(target * eased) + suffix;
             if (t < 1) requestAnimationFrame(step);
         }
         requestAnimationFrame(step);
