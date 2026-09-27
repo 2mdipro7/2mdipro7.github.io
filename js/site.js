@@ -67,4 +67,108 @@
             if (el) tocIo.observe(el);
         });
     }
+
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Scroll progress bar
+    var progress = document.querySelector('.scroll-progress');
+    if (progress) {
+        var setProgress = function () {
+            var max = document.documentElement.scrollHeight - window.innerHeight;
+            progress.style.setProperty('--progress', max > 0 ? Math.min(window.scrollY / max, 1) : 0);
+        };
+        window.addEventListener('scroll', setProgress, { passive: true });
+        window.addEventListener('resize', setProgress);
+        setProgress();
+    }
+
+    // Highlight the nav link for the section in view
+    var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    if (navLinks.length && 'IntersectionObserver' in window) {
+        var navMap = {};
+        navLinks.forEach(function (a) { navMap[a.getAttribute('href').slice(1)] = a; });
+        var spy = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                navLinks.forEach(function (a) { a.classList.remove('is-active'); });
+                if (navMap[entry.target.id]) navMap[entry.target.id].classList.add('is-active');
+            });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        document.querySelectorAll('main section[id]').forEach(function (sec) { spy.observe(sec); });
+    }
+
+    // Count numbers up when they come into view
+    var counters = document.querySelectorAll('[data-count]');
+    function runCount(el) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        var suffix = el.getAttribute('data-suffix') || '';
+        if (reduceMotion || isNaN(target)) { el.textContent = target + suffix; return; }
+        var start = null, duration = 1100;
+        function step(ts) {
+            if (!start) start = ts;
+            var t = Math.min((ts - start) / duration, 1);
+            var eased = 1 - Math.pow(1 - t, 3);
+            el.textContent = Math.round(target * eased) + suffix;
+            if (t < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+    }
+    if (counters.length && 'IntersectionObserver' in window) {
+        var countIo = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    runCount(entry.target);
+                    countIo.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.6 });
+        counters.forEach(function (el) { countIo.observe(el); });
+    }
+
+    // Light up connection tracks node by node
+    var tracks = document.querySelectorAll('.track');
+    tracks.forEach(function (track) {
+        track.querySelectorAll('li').forEach(function (li, i) { li.style.setProperty('--i', i); });
+    });
+    if (tracks.length && 'IntersectionObserver' in window) {
+        var trackIo = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-lit');
+                    trackIo.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.4 });
+        tracks.forEach(function (t) { trackIo.observe(t); });
+    } else {
+        tracks.forEach(function (t) { t.classList.add('is-lit'); });
+    }
+
+    // "Is this you?" self-assessment
+    var fitItems = document.querySelectorAll('.fit-item');
+    var fitNum = document.querySelector('.fit-num');
+    var fitMsg = document.querySelector('.fit-msg');
+    var fitCta = document.querySelector('.fit-cta');
+    function updateFit() {
+        var n = document.querySelectorAll('.fit-item[aria-pressed="true"]').length;
+        if (fitNum) {
+            fitNum.textContent = n;
+            fitNum.classList.remove('bump');
+            void fitNum.offsetWidth;
+            fitNum.classList.add('bump');
+        }
+        if (fitMsg) {
+            if (n === 0) fitMsg.textContent = 'Select any that apply to your team.';
+            else if (n < 3) fitMsg.textContent = 'Keep going. Most teams I work with recognise three or more.';
+            else fitMsg.textContent = 'That’s exactly the kind of problem I solve. Let’s map it together.';
+        }
+        if (fitCta) fitCta.classList.toggle('is-hot', n >= 3);
+    }
+    fitItems.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var on = btn.getAttribute('aria-pressed') === 'true';
+            btn.setAttribute('aria-pressed', on ? 'false' : 'true');
+            updateFit();
+        });
+    });
 })();

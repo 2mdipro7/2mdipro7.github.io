@@ -24,6 +24,7 @@
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
     <header class="site-header">
         <div class="wrap nav-inner">
@@ -79,14 +80,14 @@
                         <span class="board-date">Example · Week 38</span>
                     </div>
                     <div class="board-kpis">
-                        <div class="board-kpi"><b>12/14</b><span>milestones on track</span></div>
+                        <div class="board-kpi"><b data-count="12" data-suffix="/14">12/14</b><span>milestones on track</span></div>
                         <div class="board-kpi"><b>3</b><span>decisions needed</span></div>
                         <div class="board-kpi"><b>0</b><span>updates chased</span></div>
                     </div>
-                    <div class="board-row"><span class="task">Q4 launch plan</span><span class="owner">AR</span><span class="status track">On track</span></div>
+                    <div class="board-row"><span class="task">Q4 launch plan</span><span class="owner">AR</span><span class="status on-track">On track</span></div>
                     <div class="board-row"><span class="task">Vendor onboarding SOP</span><span class="owner">MK</span><span class="status done">Done</span></div>
-                    <div class="board-row"><span class="task">Collections workflow automation</span><span class="owner">SH</span><span class="status track">On track</span></div>
-                    <div class="board-row"><span class="task">Hiring pipeline</span><span class="owner">TN</span><span class="status risk">At risk</span></div>
+                    <div class="board-row"><span class="task">Collections workflow automation</span><span class="owner">SH</span><span class="status on-track">On track</span></div>
+                    <div class="board-row"><span class="task">Hiring pipeline</span><span class="owner">TN</span><span class="status risk"><span class="pulse-dot"></span>At risk</span></div>
                     <div class="board-note"><i class="fas fa-circle-check"></i>Every item has an owner, a date, and a status, and nobody had to chase it.</div>
                 </div>
             </div>
@@ -95,12 +96,11 @@
         <div class="proof-strip">
             <div class="wrap proof-inner">
                 <span class="proof-label">Experience across</span>
-                <ul class="proof-names">
-                    <li>Perceive Now</li>
-                    <li>AIBYTERS</li>
-                    <li>Invento Software</li>
-                    <li>SHAREit Group</li>
-                    <li>Nexgen Electronics</li>
+                <ul class="proof-logos">
+                    <li><a href="https://perceivenow.ai/" target="_blank" rel="noopener" aria-label="Perceive Now"><img src="resources/images/logos/perceive-now.svg" alt="Perceive Now" height="24"></a></li>
+                    <li><a href="https://aibyters.com" target="_blank" rel="noopener" aria-label="AIBYTERS"><img src="resources/images/logos/aibyters.svg" alt="AIBYTERS" height="30"></a></li>
+                    <li><a class="wordmark" href="https://invento.com.bd/" target="_blank" rel="noopener">Invento Software</a></li>
+                    <li><a class="wordmark" href="https://www.ushareit.com/" target="_blank" rel="noopener">SHAREit Group</a></li>
                 </ul>
             </div>
         </div>
@@ -120,26 +120,36 @@
                     <li><i class="fas fa-layer-group"></i>Three tools, no single source of truth</li>
                     <li><i class="fas fa-person-running"></i>Leadership chasing updates</li>
                 </ul>
-                <div class="before-after reveal">
-                    <div class="ba-col before">
-                        <h3><i class="fas fa-circle-xmark"></i>Before</h3>
-                        <ul>
-                            <li>Priorities scattered across meetings, Slack, and email</li>
-                            <li>"Who owns this?" comes up every week</li>
-                            <li>Processes live in a few people's heads</li>
-                            <li>Leadership pieces together status by asking around</li>
-                            <li>Hours lost to repetitive manual work</li>
-                        </ul>
+                <div class="ba reveal" role="table" aria-label="Before and after working together">
+                    <div class="ba-row ba-head" role="row">
+                        <div class="ba-cell before" role="columnheader"><i class="fas fa-circle-xmark"></i><span>Before</span></div>
+                        <span class="ba-arrow" aria-hidden="true"></span>
+                        <div class="ba-cell after" role="columnheader"><i class="fas fa-circle-check"></i><span>After</span></div>
                     </div>
-                    <div class="ba-col after">
-                        <h3><i class="fas fa-circle-check"></i>After</h3>
-                        <ul>
-                            <li>One prioritized plan everyone works from</li>
-                            <li>Every initiative has a named owner and a date</li>
-                            <li>Documented SOPs, playbooks, and checklists</li>
-                            <li>KPIs and updates arrive without anyone asking</li>
-                            <li>Repetitive work automated where it pays off</li>
-                        </ul>
+                    <div class="ba-row">
+                        <div class="ba-cell before"><i class="fas fa-xmark"></i><span>Priorities scattered across meetings, Slack, and email</span></div>
+                        <span class="ba-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+                        <div class="ba-cell after"><i class="fas fa-check"></i><span>One prioritized plan everyone works from</span></div>
+                    </div>
+                    <div class="ba-row">
+                        <div class="ba-cell before"><i class="fas fa-xmark"></i><span>"Who owns this?" comes up every week</span></div>
+                        <span class="ba-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+                        <div class="ba-cell after"><i class="fas fa-check"></i><span>Every initiative has a named owner and a date</span></div>
+                    </div>
+                    <div class="ba-row">
+                        <div class="ba-cell before"><i class="fas fa-xmark"></i><span>Processes live in a few people's heads</span></div>
+                        <span class="ba-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+                        <div class="ba-cell after"><i class="fas fa-check"></i><span>Documented SOPs, playbooks, and checklists</span></div>
+                    </div>
+                    <div class="ba-row">
+                        <div class="ba-cell before"><i class="fas fa-xmark"></i><span>Leadership pieces together status by asking around</span></div>
+                        <span class="ba-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+                        <div class="ba-cell after"><i class="fas fa-check"></i><span>KPIs and updates arrive without anyone asking</span></div>
+                    </div>
+                    <div class="ba-row">
+                        <div class="ba-cell before"><i class="fas fa-xmark"></i><span>Hours lost to repetitive manual work</span></div>
+                        <span class="ba-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+                        <div class="ba-cell after"><i class="fas fa-check"></i><span>Repetitive work automated where it pays off</span></div>
                     </div>
                 </div>
                 <p class="pull-quote reveal">My job is to make the <strong>"after"</strong> column your normal week, so leadership can lead instead of chase.</p>
@@ -148,31 +158,30 @@
 
         <!-- 02 STORY -->
         <section class="chapter alt" id="story">
-            <div class="wrap story-grid">
-                <div class="story-intro reveal">
-                    <span class="chapter-num">02 · How I got here</span>
-                    <h2>I've sat in almost every seat at the table.</h2>
-                    <p class="chapter-lead">Most project managers see the task board. My career has given me the view from every side of it: the data, the user, the report, the program, and the business.</p>
-                    <p>That's why I can connect a CEO's priority to what a developer ships on Friday, and explain each side to the other.</p>
-                    <div class="portrait-card">
-                        <picture>
-                            <source srcset="resources/images/headshot.webp" type="image/webp">
-                            <img class="portrait-photo" src="resources/images/headshot.jpg" alt="" width="480" height="480" loading="lazy">
-                        </picture>
-                        <div>
-                            <b>Mehrab Mashrafi</b>
-                            <span>Business Operations &amp; Program Manager · Process Improvement &amp; AI</span>
-                        </div>
+            <div class="wrap">
+                <div class="story-grid">
+                    <div class="story-intro reveal">
+                        <span class="chapter-num">02 · How I got here</span>
+                        <h2>I've sat in almost every seat at the table.</h2>
+                        <p class="chapter-lead">Most project managers see the task board. My career has given me the view from every side of it: the data, the user, the report, the program, and the business.</p>
+                        <figure class="portrait">
+                            <picture>
+                                <source srcset="resources/images/portrait.webp" type="image/webp">
+                                <img src="resources/images/portrait.jpg" alt="Mehrab Mashrafi" width="720" height="900" loading="lazy">
+                            </picture>
+                            <figcaption>
+                                <b>Mehrab Mashrafi</b>
+                                <span><i class="fas fa-location-dot"></i>Dhaka · works with teams worldwide</span>
+                            </figcaption>
+                        </figure>
                     </div>
-                </div>
 
-                <div>
                     <ol class="timeline">
                         <li class="reveal">
                             <span class="dot"><i class="fas fa-database"></i></span>
                             <span class="when">2016 – 2020</span>
                             <h3>Database Specialist</h3>
-                            <p class="where">Nexgen Electronics · alongside a BSc in Business IT, University of Greenwich</p>
+                            <p class="where">Part-time, while completing a BSc in Business IT at the University of Greenwich</p>
                             <p class="lesson">Every business decision rests on data that someone has to keep clean and structured.</p>
                         </li>
                         <li class="reveal">
@@ -204,12 +213,19 @@
                             <p class="lesson">Now I run programs end-to-end, from a founder's idea to an audited, working system.</p>
                         </li>
                     </ol>
-                    <div class="reveal" style="margin-top:36px">
-                        <h3>Which makes me the connection point between:</h3>
-                        <ul class="chain">
-                            <li>CEO / Founder</li><li>Operations</li><li>Project Teams</li><li>Analysts</li><li>Designers</li><li>Developers</li><li class="hl">AI &amp; Automation</li>
-                        </ul>
-                    </div>
+                </div>
+
+                <div class="connect reveal">
+                    <h3 class="connect-title">That's why I can connect a CEO's priority to what a developer ships on Friday, and explain each side to the other.</h3>
+                    <ol class="track" aria-label="The people I connect">
+                        <li><span class="node"></span><span class="label">CEO / Founder</span></li>
+                        <li><span class="node"></span><span class="label">Operations</span></li>
+                        <li><span class="node"></span><span class="label">Project Teams</span></li>
+                        <li><span class="node"></span><span class="label">Analysts</span></li>
+                        <li><span class="node"></span><span class="label">Designers</span></li>
+                        <li><span class="node"></span><span class="label">Developers</span></li>
+                        <li class="end"><span class="node"></span><span class="label">AI &amp; Automation</span></li>
+                    </ol>
                 </div>
             </div>
         </section>
@@ -293,10 +309,18 @@
                     <li><h3>Automate</h3><p>AI and automation where they remove real effort.</p></li>
                 </ol>
                 <div class="approach-foot reveal">
-                    <p>In practice, an unclear leadership request becomes:</p>
-                    <ul class="chain">
-                        <li>Priority</li><li>Requirements</li><li>Project</li><li>Owners</li><li>Tasks</li><li>Timeline</li><li>Reporting</li><li>Follow-up</li><li class="hl">Process improvement</li>
-                    </ul>
+                    <h3 class="connect-title">In practice, an unclear leadership request becomes:</h3>
+                    <ol class="track on-dark" aria-label="How a request becomes a running process">
+                        <li><span class="node"></span><span class="label">Priority</span></li>
+                        <li><span class="node"></span><span class="label">Requirements</span></li>
+                        <li><span class="node"></span><span class="label">Project</span></li>
+                        <li><span class="node"></span><span class="label">Owners</span></li>
+                        <li><span class="node"></span><span class="label">Tasks</span></li>
+                        <li><span class="node"></span><span class="label">Timeline</span></li>
+                        <li><span class="node"></span><span class="label">Reporting</span></li>
+                        <li><span class="node"></span><span class="label">Follow-up</span></li>
+                        <li class="end"><span class="node"></span><span class="label">Process improvement</span></li>
+                    </ol>
                 </div>
             </div>
         </section>
@@ -322,10 +346,10 @@
                         <a class="link-arrow" href="projects/credit-union-platform.html">Read the case study <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="case-stats">
-                        <div class="stat"><b>57/70</b><span>audit findings verified closed</span></div>
-                        <div class="stat"><b>13</b><span>end-to-end user flows documented &amp; walked</span></div>
-                        <div class="stat"><b>12</b><span>management &amp; AI dashboard views</span></div>
-                        <div class="stat"><b>2</b><span>ML models for loan risk</span></div>
+                        <div class="stat"><b data-count="57" data-suffix="/70">57/70</b><span>audit findings verified closed</span></div>
+                        <div class="stat"><b data-count="13">13</b><span>end-to-end user flows documented &amp; walked</span></div>
+                        <div class="stat"><b data-count="12">12</b><span>management &amp; AI dashboard views</span></div>
+                        <div class="stat"><b data-count="2">2</b><span>ML models for loan risk</span></div>
                     </div>
                 </article>
 
@@ -345,8 +369,8 @@
                         <h3>Visual Intelligence Library: one standard for every report</h3>
                         <p>Every dashboard redrew the same charts differently. I built a single reusable library, from KPI cards to SWOT and risk matrices, on one shared data spec.</p>
                         <div class="mini-stats">
-                            <div><b>48</b><span>components</span></div>
-                            <div><b>6</b><span>categories</span></div>
+                            <div><b data-count="48">48</b><span>components</span></div>
+                            <div><b data-count="6">6</b><span>categories</span></div>
                         </div>
                         <a class="link-arrow" href="projects/visual-intelligence-library.html">Read the case study <i class="fas fa-arrow-right"></i></a>
                     </article>
@@ -440,24 +464,26 @@
                 <div class="chapter-head center reveal">
                     <span class="chapter-num">06 · Is this you?</span>
                     <h2>I'm particularly useful when…</h2>
-                    <p class="chapter-lead">If three or more of these sound familiar, we should talk.</p>
+                    <p class="chapter-lead">Tick the ones that sound familiar. If it's three or more, we should talk.</p>
                 </div>
-                <ul class="fit-grid">
-                    <li class="reveal"><i class="fas fa-check"></i>The CEO or founder is involved in too many day-to-day operational details</li>
-                    <li class="reveal"><i class="fas fa-check"></i>Projects are moving, but execution feels scattered</li>
-                    <li class="reveal"><i class="fas fa-check"></i>Teams need stronger project management and accountability</li>
-                    <li class="reveal"><i class="fas fa-check"></i>Responsibilities and ownership are unclear</li>
-                    <li class="reveal"><i class="fas fa-check"></i>Processes exist informally but are not documented</li>
-                    <li class="reveal"><i class="fas fa-check"></i>SOPs and operational documentation need to be created</li>
-                    <li class="reveal"><i class="fas fa-check"></i>Management needs clearer KPI tracking and reporting</li>
-                    <li class="reveal"><i class="fas fa-check"></i>Different departments are struggling to coordinate</li>
-                    <li class="reveal"><i class="fas fa-check"></i>Business and technical teams aren't communicating effectively</li>
-                    <li class="reveal"><i class="fas fa-check"></i>You want to improve or automate repetitive workflows</li>
-                    <li class="reveal"><i class="fas fa-check"></i>You have AI or automation ideas but need an implementation plan</li>
-                    <li class="reveal"><i class="fas fa-check"></i>You need someone to organize complex initiatives and keep them moving</li>
+                <ul class="fit-grid reveal">
+                    <li><button type="button" class="fit-item" aria-pressed="false"><span class="box"><i class="fas fa-check"></i></span><span>The CEO or founder is involved in too many day-to-day operational details</span></button></li>
+                    <li><button type="button" class="fit-item" aria-pressed="false"><span class="box"><i class="fas fa-check"></i></span><span>Projects are moving, but execution feels scattered</span></button></li>
+                    <li><button type="button" class="fit-item" aria-pressed="false"><span class="box"><i class="fas fa-check"></i></span><span>Teams need stronger project management and accountability</span></button></li>
+                    <li><button type="button" class="fit-item" aria-pressed="false"><span class="box"><i class="fas fa-check"></i></span><span>Responsibilities and ownership are unclear</span></button></li>
+                    <li><button type="button" class="fit-item" aria-pressed="false"><span class="box"><i class="fas fa-check"></i></span><span>Processes exist informally but are not documented</span></button></li>
+                    <li><button type="button" class="fit-item" aria-pressed="false"><span class="box"><i class="fas fa-check"></i></span><span>SOPs and operational documentation need to be created</span></button></li>
+                    <li><button type="button" class="fit-item" aria-pressed="false"><span class="box"><i class="fas fa-check"></i></span><span>Management needs clearer KPI tracking and reporting</span></button></li>
+                    <li><button type="button" class="fit-item" aria-pressed="false"><span class="box"><i class="fas fa-check"></i></span><span>Different departments are struggling to coordinate</span></button></li>
+                    <li><button type="button" class="fit-item" aria-pressed="false"><span class="box"><i class="fas fa-check"></i></span><span>Business and technical teams aren't communicating effectively</span></button></li>
+                    <li><button type="button" class="fit-item" aria-pressed="false"><span class="box"><i class="fas fa-check"></i></span><span>You want to improve or automate repetitive workflows</span></button></li>
+                    <li><button type="button" class="fit-item" aria-pressed="false"><span class="box"><i class="fas fa-check"></i></span><span>You have AI or automation ideas but need an implementation plan</span></button></li>
+                    <li><button type="button" class="fit-item" aria-pressed="false"><span class="box"><i class="fas fa-check"></i></span><span>You need someone to organize complex initiatives and keep them moving</span></button></li>
                 </ul>
-                <div class="center reveal">
-                    <a class="btn btn-primary" href="https://calendly.com/2mdipro7" target="_blank" rel="noopener"><i class="fas fa-calendar-check"></i>Book a 30-min call</a>
+                <div class="fit-result reveal">
+                    <p class="fit-count" aria-live="polite"><span class="fit-num">0</span> of 12 sound familiar</p>
+                    <p class="fit-msg">Select any that apply to your team.</p>
+                    <a class="btn btn-primary fit-cta" href="https://calendly.com/2mdipro7" target="_blank" rel="noopener"><i class="fas fa-calendar-check"></i>Book a 30-min call</a>
                 </div>
             </div>
         </section>
@@ -467,41 +493,66 @@
             <div class="wrap">
                 <div class="chapter-head reveal">
                     <span class="chapter-num">Background</span>
-                    <h2>Education &amp; credentials.</h2>
+                    <h2>What shaped how I work.</h2>
+                    <p class="chapter-lead">Every credential here earns its place by what it lets me do for your team.</p>
                 </div>
+
+                <article class="human-card reveal">
+                    <div class="human-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <div class="human-body">
+                        <p class="case-kicker">The most human skill I bring</p>
+                        <h3>Two years as a mental health volunteer taught me to listen before I plan.</h3>
+                        <p>At <a href="https://dearcamelia.com/en/" target="_blank" rel="noopener">Dear Camelia</a> (2021 – 2023) I was a first responder for people reaching out in distress. That work built two skills I use every day in operations: <strong>empathy</strong> and <strong>active listening</strong>, hearing what's actually being said rather than what I expect to hear.</p>
+                        <p>In practice, that's how I find the real blocker behind a "we're on track" update, keep difficult stakeholder conversations calm, and earn the trust that makes teams flag problems early instead of late.</p>
+                        <ul class="tags"><li>Empathy</li><li>Active listening</li><li>Calm under pressure</li><li>Trust-building</li></ul>
+                    </div>
+                </article>
+
                 <div class="cred-grid">
                     <div class="reveal">
-                        <h3>Education</h3>
+                        <h3 class="cred-label">Education</h3>
                         <ul class="edu-list">
-                            <li><b>MBA in Management</b><span>University of Barishal · 2025 – Present</span></li>
-                            <li><b>MSc in Applied Statistics &amp; Data Science</b><span>Jahangirnagar University · 2021 – 2023</span></li>
-                            <li><b>BSc in Business Information Technology</b><span>University of Greenwich · 2015 – 2020</span></li>
+                            <li><b>MBA in Management</b><span class="meta">University of Barishal · 2025 – Present</span><span class="gives">Strategy, finance, and organizational behaviour: the management lens behind every operational decision.</span></li>
+                            <li><b>MSc in Applied Statistics &amp; Data Science</b><span class="meta">Jahangirnagar University · 2021 – 2023</span><span class="gives">Statistical rigour, so I can tell a real trend from noise before it reaches a leadership report.</span></li>
+                            <li><b>BSc in Business Information Technology</b><span class="meta">University of Greenwich · 2015 – 2020</span><span class="gives">How business processes and information systems fit together, the foundation for workflows teams actually use.</span></li>
                         </ul>
 
-                        <h3 style="margin-top:36px">Languages</h3>
+                        <h3 class="cred-label">Languages</h3>
                         <ul class="lang-row">
-                            <li>Bengali<span>Native</span></li>
                             <li>English<span>C1</span></li>
+                            <li>Bengali<span>Native</span></li>
                             <li>Hindi<span>B1</span></li>
                             <li>German<span>A2</span></li>
                         </ul>
-
-                        <h3>Volunteering</h3>
-                        <p class="volunteer"><b>Mental Health Volunteer, <a href="https://dearcamelia.com/en/" target="_blank" rel="noopener">Dear Camelia</a></b> (2021 – 2023). First-response support on a virtual platform, plus awareness articles and campaigns.</p>
+                        <p class="gives-line">Client-facing English for documentation, reporting, and workshops, and comfortable working across South Asian and European teams.</p>
                     </div>
+
                     <div class="reveal">
-                        <h3>Certificates</h3>
-                        <ul class="cert-list">
-                            <li><a href="https://coursera.org/share/c943868304e7bddf7dc10d7fc2321a47" target="_blank" rel="noopener"><img src="resources/images/google.png" alt="Google"><span>Agile Project Management<small>Google · Coursera</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
-                            <li><a href="https://coursera.org/share/69c29504b1adc496584ff8c744d228ac" target="_blank" rel="noopener"><img src="resources/images/google.png" alt="Google"><span>Foundations of Project Management<small>Google · Coursera</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
-                            <li><a href="https://coursera.org/share/8cbd09a19d031d3ea1df1b31aaab2604" target="_blank" rel="noopener"><img src="resources/images/microsoft.png" alt="Microsoft"><span>Modern Data Warehouse Analytics in Azure<small>Microsoft · Coursera</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
-                            <li><a href="https://coursera.org/share/889c320050a2aa53bbe1638c50968366" target="_blank" rel="noopener"><img src="resources/images/microsoft.png" alt="Microsoft"><span>Microsoft Azure SQL<small>Microsoft · Coursera</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
-                            <li><a href="https://coursera.org/share/4315377e9d31ff8c0321ef8a2c823046" target="_blank" rel="noopener"><img src="resources/images/microsoft.png" alt="Microsoft"><span>Explore Core Data Concepts in Azure<small>Microsoft · Coursera</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
-                            <li><a href="https://coursera.org/share/c6060090b73003089e5d0073b91a70af" target="_blank" rel="noopener"><img src="resources/images/UMC.png" alt="University of Michigan"><span>UX Research at Scale<small>University of Michigan · Coursera</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
-                            <li><a href="https://drive.google.com/file/d/1P5WEsc6hpGm6krjPpinzCADOPs-sMmiP/view" target="_blank" rel="noopener"><img src="resources/images/bitm.png" alt="BITM"><span>Professional UI/UX Design<small>BITM</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
-                            <li><a href="https://drive.google.com/file/d/1QOdsrXF9G_n27KfSJ4CMMU_YAZ2-7Dvd/view" target="_blank" rel="noopener"><img src="resources/images/bitm.png" alt="BITM"><span>Oracle DBA<small>BITM</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
-                            <li><a href="https://coursera.org/share/245ff18a67df40da3c383b9a5c6d4ce9" target="_blank" rel="noopener"><img src="resources/images/jhu.png" alt="Johns Hopkins University"><span>Psychological First Aid<small>Johns Hopkins University · Coursera</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
-                        </ul>
+                        <h3 class="cred-label">Certificates, by what they prove</h3>
+                        <div class="cert-group">
+                            <p class="cert-group-title"><i class="fas fa-diagram-project"></i>Structured delivery</p>
+                            <ul class="cert-list">
+                                <li><a href="https://coursera.org/share/c943868304e7bddf7dc10d7fc2321a47" target="_blank" rel="noopener"><img src="resources/images/google.png" alt="Google"><span>Agile Project Management<small>Google · Coursera</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
+                                <li><a href="https://coursera.org/share/69c29504b1adc496584ff8c744d228ac" target="_blank" rel="noopener"><img src="resources/images/google.png" alt="Google"><span>Foundations of Project Management<small>Google · Coursera</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="cert-group">
+                            <p class="cert-group-title"><i class="fas fa-database"></i>Data &amp; systems depth</p>
+                            <ul class="cert-list">
+                                <li><a href="https://coursera.org/share/8cbd09a19d031d3ea1df1b31aaab2604" target="_blank" rel="noopener"><img src="resources/images/microsoft.png" alt="Microsoft"><span>Modern Data Warehouse Analytics in Azure<small>Microsoft · Coursera</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
+                                <li><a href="https://coursera.org/share/889c320050a2aa53bbe1638c50968366" target="_blank" rel="noopener"><img src="resources/images/microsoft.png" alt="Microsoft"><span>Microsoft Azure SQL<small>Microsoft · Coursera</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
+                                <li><a href="https://coursera.org/share/4315377e9d31ff8c0321ef8a2c823046" target="_blank" rel="noopener"><img src="resources/images/microsoft.png" alt="Microsoft"><span>Explore Core Data Concepts in Azure<small>Microsoft · Coursera</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
+                                <li><a href="https://drive.google.com/file/d/1QOdsrXF9G_n27KfSJ4CMMU_YAZ2-7Dvd/view" target="_blank" rel="noopener"><img src="resources/images/bitm.png" alt="BITM"><span>Oracle DBA<small>BITM</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="cert-group">
+                            <p class="cert-group-title"><i class="fas fa-users"></i>People-centred design</p>
+                            <ul class="cert-list">
+                                <li><a href="https://coursera.org/share/c6060090b73003089e5d0073b91a70af" target="_blank" rel="noopener"><img src="resources/images/UMC.png" alt="University of Michigan"><span>UX Research at Scale<small>University of Michigan · Coursera</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
+                                <li><a href="https://drive.google.com/file/d/1P5WEsc6hpGm6krjPpinzCADOPs-sMmiP/view" target="_blank" rel="noopener"><img src="resources/images/bitm.png" alt="BITM"><span>Professional UI/UX Design<small>BITM</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
+                                <li><a href="https://coursera.org/share/245ff18a67df40da3c383b9a5c6d4ce9" target="_blank" rel="noopener"><img src="resources/images/jhu.png" alt="Johns Hopkins University"><span>Psychological First Aid<small>Johns Hopkins University · Coursera</small></span><i class="fas fa-arrow-up-right-from-square"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
