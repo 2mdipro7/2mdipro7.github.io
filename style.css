@@ -420,6 +420,81 @@ p {
     margin-right: 6px;
 }
 
+/* Hero intro: glowing headshot */
+.hero-intro {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 26px;
+}
+
+.hero-intro .eyebrow {
+    margin-bottom: 0;
+}
+
+.hero-intro .eyebrow::before {
+    display: none;
+}
+
+.hero-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 4px;
+}
+
+.avatar-glow {
+    position: relative;
+    width: 124px;
+    height: 124px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    padding: 4px;
+    isolation: isolate;
+    box-shadow: 0 0 22px rgba(9, 193, 153, 0.55), 0 0 60px rgba(9, 193, 153, 0.28);
+}
+
+/* rotating gradient ring */
+.avatar-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, var(--brand-bright), #7ef0d3, var(--accent), var(--brand-bright));
+    animation: ring-spin 8s linear infinite;
+    z-index: -1;
+}
+
+/* soft halo */
+.avatar-glow::after {
+    content: "";
+    position: absolute;
+    inset: -26px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(9, 193, 153, 0.6) 0%, rgba(9, 193, 153, 0.25) 45%, rgba(9, 193, 153, 0) 70%);
+    filter: blur(8px);
+    animation: halo-pulse 3.6s ease-in-out infinite;
+    z-index: -2;
+}
+
+.avatar-glow img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--bg);
+}
+
+@keyframes ring-spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes halo-pulse {
+    0%, 100% { opacity: 0.75; transform: scale(0.97); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
 /* Hero visual: "after" status board */
 .board {
     background: var(--surface);
@@ -758,6 +833,14 @@ p {
     width: 56px;
     height: 56px;
     flex-shrink: 0;
+}
+
+.portrait-card .portrait-photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--brand-bright), 0 0 18px rgba(9, 193, 153, 0.45);
 }
 
 .portrait-card b {
@@ -1946,6 +2029,12 @@ figcaption {
     *::after {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+    .avatar-glow::before,
+    .avatar-glow::after {
+        animation: none !important;
     }
 }
 
@@ -2101,6 +2190,24 @@ figcaption {
 
     .board-kpi b {
         font-size: 17px;
+    }
+
+    .hero-intro {
+        gap: 16px;
+    }
+
+    .avatar-glow {
+        width: 92px;
+        height: 92px;
+        padding: 3px;
+    }
+
+    .avatar-glow img {
+        border-width: 3px;
+    }
+
+    .hero-name {
+        font-size: 1.1rem;
     }
 
     .article section,
