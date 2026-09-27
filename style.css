@@ -55,7 +55,6 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('path/to/your/background-image.jpg'); /* Add your background image path */
     opacity: 0.2; /* Adjust opacity as desired */
     z-index: -1; /* Place it behind the content */
 }
@@ -719,4 +718,353 @@ td {
     background: #eaf2ff;
     padding: 4px 10px;
     border-radius: 12px;
+}
+
+
+/* ===== Positioning / hero ===== */
+.role-title {
+    font-size: 18px !important;
+    font-weight: bold;
+    opacity: 0.95 !important;
+    margin: 6px 16px 12px !important;
+}
+
+.value-prop {
+    max-width: 620px;
+    margin: 14px auto 10px !important;
+    padding: 0 16px;
+    font-size: 17px !important;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.hero-ctas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 14px 0;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+.cta-button.primary {
+    background-color: #fff;
+    color: #254135 !important;
+}
+
+.cta-button.primary:hover {
+    background-color: #e6f7f2;
+}
+
+.cta-button.secondary {
+    border: 2px solid #fff;
+    color: #fff !important;
+}
+
+.cta-button.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.cta-button.secondary.dark {
+    border-color: #254135;
+    color: #254135 !important;
+}
+
+.cta-button.secondary.dark:hover {
+    background-color: #e6f7f2;
+}
+
+.section-intro {
+    color: #555;
+    font-style: italic;
+}
+
+.lead {
+    font-size: 19px !important;
+    font-weight: bold;
+    color: #254135;
+}
+
+/* ===== Services ===== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.service-card {
+    background-color: #f9f9f9;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    background-color: #eef3f6;
+}
+
+.service-card h3 {
+    margin: 0 0 10px;
+    font-size: 17px;
+    color: #222;
+}
+
+.service-card h3 i {
+    color: #09a07f;
+    margin-right: 6px;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #444;
+}
+
+.tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.tag-row span {
+    background-color: #768a9e;
+    color: #fff;
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 12px;
+}
+
+.tools-heading {
+    margin: 10px 0 6px;
+}
+
+/* ===== Differentiator flow ===== */
+.flow-chain {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 0;
+    margin: 12px 0 18px;
+}
+
+.flow-chain span {
+    background: linear-gradient(45deg, #254135, #09c199);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 7px 12px;
+    border-radius: 20px;
+}
+
+.flow-chain.alt span {
+    background: linear-gradient(45deg, #333, #2958b5);
+}
+
+.flow-chain span {
+    position: relative;
+}
+
+.flow-chain span:not(:last-child) {
+    margin-right: 26px;
+}
+
+.flow-chain span:not(:last-child)::after {
+    content: "\2192";
+    position: absolute;
+    right: -21px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #09a07f;
+    font-size: 16px;
+}
+
+.flow-chain.alt span:not(:last-child)::after {
+    color: #2958b5;
+}
+
+/* ===== Approach ===== */
+.approach-steps {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+}
+
+.approach-steps li {
+    counter-increment: step;
+    background-color: #f9f9f9;
+    border-left: 4px solid #09c199;
+    border-radius: 6px;
+    padding: 12px 14px 12px 50px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    text-align: left;
+}
+
+.approach-steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #254135;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.approach-steps li strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.approach-steps li span {
+    font-size: 14px;
+    color: #444;
+}
+
+/* ===== Checklist ===== */
+section ul.check-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4px 20px;
+}
+
+section ul.check-list li {
+    margin-left: 0;
+    padding-left: 28px;
+    position: relative;
+    text-align: left;
+}
+
+section ul.check-list li::before {
+    content: "\2713";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    color: #09a07f;
+    font-weight: bold;
+}
+
+.section-cta {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.section-cta .cta-button.primary,
+.closing-cta .cta-button.primary {
+    background: linear-gradient(45deg, #254135, #09c199);
+    color: #fff !important;
+}
+
+.closing-cta {
+    text-align: center;
+    background-color: #f3faf8;
+    border-bottom: none;
+}
+
+.closing-cta h2 {
+    justify-content: center;
+}
+
+/* ===== Project cards ===== */
+.projects h3 {
+    margin-top: 0;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* ===== Skills grid ===== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.skills-grid .column {
+    width: auto;
+    margin: 0;
+}
+
+/* ===== Case study pages ===== */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin: 12px 0;
+}
+
+.result-tile {
+    background-color: #f3faf8;
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.result-tile strong {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color: #254135;
+}
+
+.result-tile span {
+    font-size: 13px;
+    color: #555;
+}
+
+.case-meta {
+    color: #555;
+    font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+    .flow-chain span {
+        font-size: 12px;
+    }
+    section ul.check-list {
+        grid-template-columns: 1fr;
+    }
+    section {
+        padding: 12px;
+    }
+    main {
+        margin: 10px;
+        padding: 10px;
+    }
 }
