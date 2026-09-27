@@ -3,46 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehrab Mashrafi's Portfolio</title>
+    <title>Mammal World - AI for Wildlife Conservation in the Indian Subcontinent | Mehrab Mashrafi</title>
+    <meta name="description" content="Mammal World - AI for Wildlife Conservation in the Indian Subcontinent: a data &amp; AI project by Mehrab Mashrafi.">
+    <meta name="theme-color" content="#1c3a30">
+    <link rel="icon" type="image/svg+xml" href="../resources/images/mylogo_dark.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
+    <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="branding">
-                <img src="../resources/images/My Logo Gradient.svg" alt="Mehrab's Logo" class="logo"> <!-- Add your logo here -->
-            </div>
-            <h1>Mehrab Mashrafi</h1>
-            <p class="role-title">Business Operations &amp; Program Manager | Process Improvement &amp; AI</p>
-            <div class="specialties">
-                <p class="specialty">OPERATIONS</p>
-                <p class="specialty">PROGRAMS</p>
-                <p class="specialty">AI</p>
-            </div>
-            <!-- Place this in the body of your HTML where you want the clock to appear -->
-            <div id="clock">Loading time...</div>
-            <div class="contact-icons">
-                <a href="https://github.com/2mdipro7" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/2mdipro7" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/dipro7mufc" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="mailto:mm4mashrafi@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://wa.me/+8801646302935" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html#about">About</a></li>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap nav-inner">
+            <a class="brand" href="../index.html" aria-label="Mehrab Mashrafi, home">
+                <img src="../resources/images/mylogo_dark.svg" alt="" width="34" height="34">
+                <span>Mehrab Mashrafi</span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#story">Story</a></li>
                 <li><a href="../index.html#services">Services</a></li>
-                <li><a href="../index.html#case-studies">Case Studies</a></li>
-                <li><a href="../index.html#projects">Data &amp; AI Projects</a></li>
-                <li><a href="https://calendly.com/2mdipro7" target="_blank">Book a Call</a></li>
+                <li><a href="../index.html#approach">Approach</a></li>
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#background">Background</a></li>
+                <li><a class="btn btn-primary" href="https://calendly.com/2mdipro7" target="_blank" rel="noopener">Book a call</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
-    <main>
-        <a href="../index.html#projects"  style="color: #333; margin-left: 20px;"><i class="fas fa-arrow-left fa-2x"></i></a>
+    <main id="main" class="article">
+        <a class="back-link" href="../index.html#projects"><i class="fas fa-arrow-left"></i>All data &amp; AI projects</a>
+
 
         <section class="project-details">
             <h1>Mammal World - AI for Wildlife Conservation in the Indian Subcontinent</h1>
@@ -58,20 +53,20 @@
             <p>
                 The Indian subcontinent is blessed with a diverse range of mammal species, each contributing to the region's rich biodiversity. However, wildlife conservation faces significant challenges, including the need for efficient species identification, behavior understanding, and habitat preservation. Our project addresses these challenges by harnessing AI technology to aid in wildlife conservation efforts.
             </p>
-            <section class="project-links" style="border-bottom: none;">
-                <ul style="list-style: none; margin-left: -60px;">
+            <section class="project-links" >
+                <ul class="btn-list">
                     <li>
-                        <a class="button github" href="https://github.com/2mdipro7/mammal-world" target="_blank">
+                        <a class="button github" href="https://github.com/2mdipro7/mammal-world" target="_blank" rel="noopener">
                             <i class="fab fa-github icon"></i>GitHub
                         </a>
                     </li>
                     <li>
-                        <a class="button huggingface" href="https://huggingface.co/spaces/dipro7/mammals-of-india" target="_blank">
+                        <a class="button huggingface" href="https://huggingface.co/spaces/dipro7/mammals-of-india" target="_blank" rel="noopener">
                             <i class="fas fa-robot icon"></i>HuggingFace Space
                         </a>
                     </li>
                     <li>
-                        <a class="button streamlit" href="https://mammal-world.streamlit.app/" target="_blank">
+                        <a class="button streamlit" href="https://mammal-world.streamlit.app/" target="_blank" rel="noopener">
                             <i class="fas fa-external-link-alt icon"></i>Web App
                         </a>
                     </li>
@@ -91,15 +86,15 @@
             <h2>Data Collection</h2>
             <article id="data-sources">
                 <h3>Data Sources</h3>
-                <p>Our endeavor to support wildlife conservation starts with the meticulous gathering of data. We began by deploying automated scripts using Selenium to scrape comprehensive records of mammal species across the Indian subcontinent from <a href="https://indiabiodiversity.org" target="_blank">indiabiodiversity.org</a>. This critical step helped us to compile a preliminary dataset that serves as the foundation of our project.</p>
+                <p>Our endeavor to support wildlife conservation starts with the meticulous gathering of data. We began by deploying automated scripts using Selenium to scrape comprehensive records of mammal species across the Indian subcontinent from <a href="https://indiabiodiversity.org" target="_blank" rel="noopener">indiabiodiversity.org</a>. This critical step helped us to compile a preliminary dataset that serves as the foundation of our project.</p>
                 
-                <p>To enhance the accuracy and reliability of our information, we meticulously cleaned and curated our dataset. Each piece of data was cross-verified against several esteemed and trustworthy web sources, including prominent databases like <a href="https://animaldiversity.org" target="_blank">animaldiversity.org</a>. This rigorous validation process ensures that our dataset meets high standards of veracity and comprehensiveness.</p>
+                <p>To enhance the accuracy and reliability of our information, we meticulously cleaned and curated our dataset. Each piece of data was cross-verified against several esteemed and trustworthy web sources, including prominent databases like <a href="https://animaldiversity.org" target="_blank" rel="noopener">animaldiversity.org</a>. This rigorous validation process ensures that our dataset meets high standards of veracity and comprehensiveness.</p>
                 
                 <p>In the final stride of our data collection journey, we amassed an extensive gallery of imagery, showcasing 103 mammal species that are native to the Indian subcontinent. This rich visual dataset was curated using advanced web scraping techniques, employing the Google Search Engine API for broad queries and the 'search_images_ddg()' function from Fastai for more focused image retrieval. The resulting compilation of images not only represents the splendor of the region's mammalian diversity but also forms the visual backbone of our AI-driven identification model.</p>
             </article>
-            <ul style="list-style: none; margin-left: -40px;">
+            <ul class="btn-list">
                 <li>
-                <a class="button colab" href="https://colab.research.google.com/drive/1MB6SqMxQL-d7uKEQTw1Bzv22m-Mi1ir7?usp=sharing" target="_blank">
+                <a class="button colab" href="https://colab.research.google.com/drive/1MB6SqMxQL-d7uKEQTw1Bzv22m-Mi1ir7?usp=sharing" target="_blank" rel="noopener">
                     <i class="fas fa-laptop-code icon"></i>View Image Collection Process
                 </a>
             </li>
@@ -124,9 +119,9 @@
         <!-- Behavioral Model Section -->
         <section id="behavioral-model">
             <h2>Behavioral Model Development</h2>
-            <ul style="list-style: none; margin-left: -40px;">
+            <ul class="btn-list">
                 <li>
-                    <a class="button colab" href="https://colab.research.google.com/drive/1blpMrT_71oER3HeUWQiH4xTBsmzeHMhf?usp=sharing" target="_blank">
+                    <a class="button colab" href="https://colab.research.google.com/drive/1blpMrT_71oER3HeUWQiH4xTBsmzeHMhf?usp=sharing" target="_blank" rel="noopener">
                         <i class="fas fa-laptop-code icon"></i>View Behavior Model Training in Colab
                     </a>
                 </li>                
@@ -144,9 +139,9 @@
         <section id="model-training">
             <h2>Main Model Training</h2>
             <!-- Colab Button -->
-            <ul style="list-style: none; margin-left: -40px;">
+            <ul class="btn-list">
                 <li>
-                <a class="button colab" href="https://colab.research.google.com/drive/1P8kzuABcCqvLawsC9XYHY_KZ9ngt0xj7?usp=sharing" target="_blank">
+                <a class="button colab" href="https://colab.research.google.com/drive/1P8kzuABcCqvLawsC9XYHY_KZ9ngt0xj7?usp=sharing" target="_blank" rel="noopener">
                     <i class="fas fa-laptop-code icon"></i>View Final Model Training in Colab
                 </a>
             </li>
@@ -192,14 +187,14 @@
                 <li>
                     <strong>Hugging Face:</strong> Our model is hosted on Hugging Face, allowing researchers and conservationists to directly interact with the model through a simple interface. 
                     <!-- Assuming you have a button style for Hugging Face links, as mentioned earlier -->
-                    <a class="button huggingface" href="https://huggingface.co/spaces/dipro7/mammals-of-india" target="_blank">
+                    <a class="button huggingface" href="https://huggingface.co/spaces/dipro7/mammals-of-india" target="_blank" rel="noopener">
                         <i class="fas fa-external-link-alt icon"></i>View on Hugging Face
                     </a>
                 </li>
                 <li>
                     <strong>Streamlit App:</strong> For a more customized and interactive experience, we've also developed a Streamlit app that demonstrates the model's capabilities in real-time.
                     <!-- Assuming you have a button style for Streamlit links, as mentioned earlier -->
-                    <a class="button streamlit" href="https://mammal-world.streamlit.app/" target="_blank">
+                    <a class="button streamlit" href="https://mammal-world.streamlit.app/" target="_blank" rel="noopener">
                         <i class="fas fa-external-link-alt icon"></i>Launch Streamlit App
                     </a>
                 </li>
@@ -219,19 +214,33 @@
                 Collaboration is at the heart of our progress. If you share our passion for wildlife conservation and have ideas or skills to contribute, we warmly invite you to join our efforts. Please visit our GitHub repository and consider contributing via a pull request.
             </p>
             <!-- GitHub Button -->
-            <ul style="list-style: none; margin-left: -40px;">
+            <ul class="btn-list">
                 <li>
-                    <a class="button github" href="https://github.com/2mdipro7/mammal-world" target="_blank">
+                    <a class="button github" href="https://github.com/2mdipro7/mammal-world" target="_blank" rel="noopener">
                         <i class="fab fa-github icon"></i>Contribute on GitHub
                     </a>
                 </li>
             </ul>
         </section>
-
     </main>
-    <footer>
-            <p>&copy; 2026 Mehrab Mashrafi</p>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <div>
+                <div>&copy; 2026 Mehrab Mashrafi · Business Operations &amp; Program Manager</div>
+                <div id="clock" aria-live="off"></div>
+            </div>
+            <ul class="socials">
+                <li><a href="https://www.linkedin.com/in/2mdipro7" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://github.com/2mdipro7" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://twitter.com/dipro7mufc" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://wa.me/+8801646302935" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="mailto:mm4mashrafi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div>
     </footer>
-    <script src="../js/clock.js">
-    </script>  
+
+    <script src="../js/site.js"></script>
+    <script src="../js/clock.js"></script>
 </body>
+</html>

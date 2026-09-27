@@ -5,127 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Intelligence Library | Mehrab Mashrafi</title>
     <meta name="description" content="Case study: standardizing management reporting with a reusable library of 48 visualization and strategy components.">
+    <meta name="theme-color" content="#1c3a30">
+    <link rel="icon" type="image/svg+xml" href="../resources/images/mylogo_dark.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/svg+xml" href="../resources/images/mylogo_dark.svg">
+    <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="branding">
-                <img src="../resources/images/My Logo Gradient.svg" alt="Mehrab's Logo" class="logo">
-            </div>
-            <h1>Mehrab Mashrafi</h1>
-            <p class="role-title">Business Operations &amp; Program Manager | Process Improvement &amp; AI</p>
-            <div class="specialties">
-                <p class="specialty">OPERATIONS</p>
-                <p class="specialty">PROGRAMS</p>
-                <p class="specialty">AI</p>
-            </div>
-            <div id="clock">Loading time...</div>
-            <div class="contact-icons">
-                <a href="https://github.com/2mdipro7" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/2mdipro7" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/dipro7mufc" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="mailto:mm4mashrafi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://wa.me/+8801646302935" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html#about">About</a></li>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap nav-inner">
+            <a class="brand" href="../index.html" aria-label="Mehrab Mashrafi, home">
+                <img src="../resources/images/mylogo_dark.svg" alt="" width="34" height="34">
+                <span>Mehrab Mashrafi</span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#story">Story</a></li>
                 <li><a href="../index.html#services">Services</a></li>
-                <li><a href="../index.html#case-studies">Case Studies</a></li>
-                <li><a href="../index.html#experience">Experience</a></li>
-                <li><a href="https://calendly.com/2mdipro7" target="_blank">Book a Call</a></li>
+                <li><a href="../index.html#approach">Approach</a></li>
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#background">Background</a></li>
+                <li><a class="btn btn-primary" href="https://calendly.com/2mdipro7" target="_blank" rel="noopener">Book a call</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
-    <main>
-        <a href="../index.html#case-studies" style="color: #333; margin-left: 20px;" aria-label="Back to case studies"><i class="fas fa-arrow-left fa-2x"></i></a>
-
-        <section class="project-details">
-            <h1>Visual Intelligence Library: Standardizing Management Reporting</h1>
-            <p class="case-meta">Founder-led build at <a href="https://aibyters.com" target="_blank">AIBYTERS</a> · Reporting standards, design &amp; delivery</p>
-            <p class="topics">
-                <span>Reporting Standards</span>
-                <span>KPI Visualization</span>
-                <span>Strategy Frameworks</span>
-                <span>Reusable Systems</span>
-                <span>React</span>
-                <span>TypeScript</span>
-            </p>
-        </section>
-
-        <section>
-            <h2><i class="fas fa-triangle-exclamation"></i> The Problem</h2>
-            <p>Every new dashboard, report, or client deliverable was redrawing the same charts from scratch, each slightly differently. KPI cards didn't match between products, strategy frameworks like SWOT or risk matrices were rebuilt as one-off slides, and every new report meant repeated design and QA work. Leadership was reading numbers presented a different way every time.</p>
-        </section>
-
-        <section>
-            <h2><i class="fas fa-user-tie"></i> My Role</h2>
-            <ul>
-                <li>Defined the reporting standard: which visual forms each type of management question needs (KPIs, trends, funnels, risk, strategy, AI insight).</li>
-                <li>Designed a single shared data specification, so any chart can be fed from the same data format.</li>
-                <li>Planned the catalogue by category and delivered it in phases, tracking progress per category.</li>
-                <li>Owned integration into the Credit Union platform's dashboards.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2><i class="fas fa-box-open"></i> What Was Delivered</h2>
-            <ul>
-                <li><b>48 components across 6 categories</b>, all wrapped in one consistent widget card with shared theming.</li>
-                <li><b>KPI cards</b>: metric, delta, target, sparkline, severity, and progress.</li>
-                <li><b>Business intelligence</b>: line, bar, combo, funnel, waterfall, matrix, Sankey, gauge, bullet, timeline, and more.</li>
-                <li><b>Strategy frameworks</b>: SWOT analysis, PESTLE analysis, risk matrix, and competitive positioning, available as live components instead of static slides.</li>
-                <li><b>Data science, geospatial &amp; network</b>: forecast bands, anomaly timelines, control charts, choropleth maps, network and dependency graphs.</li>
-                <li><b>AI intelligence</b>: Insight and Recommendation cards for presenting AI-generated findings consistently.</li>
-                <li><b>Platform adapter</b> so the same components drop directly into ERPNext/Frappe dashboards.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2><i class="fas fa-list-check"></i> Why It Matters for Operations</h2>
-            <ul>
-                <li><b>Consistency:</b> leadership sees the same KPI in the same form across every product and report.</li>
-                <li><b>Speed:</b> new dashboards are assembled from tested parts instead of being built from scratch.</li>
-                <li><b>Quality:</b> one shared data spec with automated tests means fewer broken or misleading charts.</li>
-                <li><b>Strategy on the dashboard:</b> SWOT, PESTLE, and risk matrices sit next to the live numbers they depend on.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2><i class="fas fa-chart-line"></i> Results</h2>
-            <div class="results-grid">
-                <div class="result-tile"><strong>48</strong><span>reusable visualization components</span></div>
-                <div class="result-tile"><strong>6</strong><span>component categories</span></div>
-                <div class="result-tile"><strong>4</strong><span>strategy frameworks as live components</span></div>
-                <div class="result-tile"><strong>1</strong><span>shared data spec</span></div>
-            </div>
-            <!-- METRIC: add real outcomes, e.g. number of dashboards built on the library, time to build a new dashboard before vs after -->
-        </section>
-
-        <section>
-            <h2><i class="fas fa-link"></i> Related Work</h2>
-            <p>This library powers the dashboards of the <a href="credit-union-platform.html">Credit Union Operations &amp; AI Platform</a>.</p>
-        </section>
-
-        <section class="closing-cta">
-            <h2><i class="fas fa-handshake"></i> Need something like this for your team?</h2>
-            <p>Book a 30-minute call. We'll map the bottleneck and agree on the first practical step.</p>
-            <div class="hero-ctas">
-                <a class="cta-button primary" href="https://calendly.com/2mdipro7" target="_blank"><i class="fas fa-calendar-check icon"></i>Book a Call</a>
-                <a class="cta-button secondary dark" href="../index.html#case-studies"><i class="fas fa-briefcase icon"></i>More Case Studies</a>
+    <main id="main">
+        <section class="page-hero">
+            <div class="wrap">
+                <a class="back-link" href="../index.html#work"><i class="fas fa-arrow-left"></i>All work</a>
+                <p class="case-kicker">Founder-led build · AIBYTERS · Management reporting</p>
+                <h1>Visual Intelligence Library: one standard for every report</h1>
+                <p class="summary">How I replaced one-off charts with a single reusable library of 48 components, from KPI cards to SWOT and risk matrices, so leadership sees every number presented the same way.</p>
+                <ul class="tags"><li>Reporting standards</li><li>KPI visualization</li><li>Strategy frameworks</li><li>Reusable systems</li><li>React</li><li>TypeScript</li></ul>
+                <div class="hero-stats">
+                    <div class="stat"><b>48</b><span>reusable components</span></div>
+                    <div class="stat"><b>6</b><span>component categories</span></div>
+                    <div class="stat"><b>4</b><span>strategy frameworks, live</span></div>
+                    <div class="stat"><b>1</b><span>shared data spec</span></div>
+                </div>
             </div>
         </section>
+
+        <div class="wrap case-layout">
+            <ul class="toc" aria-label="On this page">
+                <li><a href="#problem">The problem</a></li>
+                <li><a href="#role">My role</a></li>
+                <li><a href="#delivered">What was delivered</a></li>
+                <li><a href="#how">Why it matters for operations</a></li>
+                <li><a href="#results">Results</a></li>
+            </ul>
+            <div class="case-content">
+                <section id="problem" class="reveal">
+                    <h2><span class="n">01</span>The problem</h2>
+                    <p>Every new dashboard, report, or client deliverable redrew the same charts from scratch, each slightly differently. KPI cards didn't match between products, SWOT and risk matrices were rebuilt as one-off slides, and every new report meant repeated design and QA work.</p>
+                    <p>Leadership was reading the same numbers presented a different way every time.</p>
+                </section>
+                <section id="role" class="reveal">
+                    <h2><span class="n">02</span>My role</h2>
+                    <ul>
+                        <li>Defined the reporting standard: which visual form each type of management question needs (KPIs, trends, funnels, risk, strategy, AI insight).</li>
+                        <li>Designed a single shared data specification, so any chart can be fed from the same data format.</li>
+                        <li>Planned the catalogue by category and delivered it in phases, tracking progress per category.</li>
+                        <li>Owned integration into the Credit Union platform's dashboards.</li>
+                    </ul>
+                </section>
+                <section id="delivered" class="reveal">
+                    <h2><span class="n">03</span>What was delivered</h2>
+                    <ul>
+                        <li><b>48 components across 6 categories</b>, all wrapped in one consistent widget card with shared theming.</li>
+                        <li><b>KPI cards:</b> metric, delta, target, sparkline, severity, and progress.</li>
+                        <li><b>Business intelligence:</b> line, bar, combo, funnel, waterfall, matrix, Sankey, gauge, bullet, timeline, and more.</li>
+                        <li><b>Strategy frameworks:</b> SWOT, PESTLE, risk matrix, and competitive positioning as live components instead of static slides.</li>
+                        <li><b>Data science, geospatial &amp; network:</b> forecast bands, anomaly timelines, control charts, choropleth maps, and network and dependency graphs.</li>
+                        <li><b>AI intelligence:</b> Insight and Recommendation cards for presenting AI-generated findings consistently.</li>
+                        <li><b>Platform adapter</b> so the same components drop straight into ERPNext/Frappe dashboards.</li>
+                    </ul>
+                </section>
+                <section id="how" class="reveal">
+                    <h2><span class="n">04</span>Why it matters for operations</h2>
+                    <ul>
+                        <li><b>Consistency.</b> Leadership sees the same KPI in the same form across every product and report.</li>
+                        <li><b>Speed.</b> New dashboards are assembled from tested parts instead of being built from scratch.</li>
+                        <li><b>Quality.</b> One shared data spec with automated tests means fewer broken or misleading charts.</li>
+                        <li><b>Strategy next to the numbers.</b> SWOT, PESTLE, and risk matrices sit beside the live data they depend on.</li>
+                    </ul>
+                </section>
+                <section id="results" class="reveal">
+                    <h2><span class="n">05</span>Results</h2>
+                    <div class="results">
+                        <div class="tile"><b>48</b><span>reusable components</span></div>
+                        <div class="tile"><b>6</b><span>component categories</span></div>
+                        <div class="tile"><b>4</b><span>strategy frameworks, live</span></div>
+                        <div class="tile"><b>1</b><span>shared data spec</span></div>
+                    </div>
+                    <p>This library powers the dashboards of the <a href="credit-union-platform.html">Credit Union Operations &amp; AI Platform</a>.</p>
+                </section>
+                <!-- METRIC: add real outcomes, e.g. dashboards built on the library, time to build a new dashboard before vs after -->
+                <a class="next-case" href="credit-union-platform.html">
+                    <span><small>Next case study</small><b>Credit Union Operations &amp; AI Platform</b></span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <section class="wrap" style="margin-bottom:40px">
+            <div class="cta-panel reveal">
+                <span class="chapter-num" style="color:var(--brand-bright)">Want this for your team?</span>
+                <h2>Let's find the bottleneck in your operations.</h2>
+                <p class="chapter-lead">A 30-minute call is enough to map where work gets stuck and agree on a practical first step.</p>
+                <div class="hero-ctas">
+                    <a class="btn btn-light" href="https://calendly.com/2mdipro7" target="_blank" rel="noopener"><i class="fas fa-calendar-check"></i>Book a call</a>
+                    <a class="btn btn-outline-light" href="mailto:mm4mashrafi@gmail.com"><i class="fas fa-envelope"></i>Email me</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 Mehrab Mashrafi · Business Operations &amp; Program Manager</p>
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <div>
+                <div>&copy; 2026 Mehrab Mashrafi · Business Operations &amp; Program Manager</div>
+                <div id="clock" aria-live="off"></div>
+            </div>
+            <ul class="socials">
+                <li><a href="https://www.linkedin.com/in/2mdipro7" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://github.com/2mdipro7" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://twitter.com/dipro7mufc" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://wa.me/+8801646302935" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="mailto:mm4mashrafi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div>
     </footer>
-    <script src="../js/clock.js">
-    </script>
+
+    <script src="../js/site.js"></script>
+    <script src="../js/clock.js"></script>
 </body>
 </html>

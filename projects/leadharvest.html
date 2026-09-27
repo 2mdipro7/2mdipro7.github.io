@@ -5,121 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeadHarvest: Automated Lead Generation Pipeline | Mehrab Mashrafi</title>
     <meta name="description" content="Case study: turning manual prospect research into a repeatable, scored and prioritized lead generation workflow.">
+    <meta name="theme-color" content="#1c3a30">
+    <link rel="icon" type="image/svg+xml" href="../resources/images/mylogo_dark.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/svg+xml" href="../resources/images/mylogo_dark.svg">
+    <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="branding">
-                <img src="../resources/images/My Logo Gradient.svg" alt="Mehrab's Logo" class="logo">
-            </div>
-            <h1>Mehrab Mashrafi</h1>
-            <p class="role-title">Business Operations &amp; Program Manager | Process Improvement &amp; AI</p>
-            <div class="specialties">
-                <p class="specialty">OPERATIONS</p>
-                <p class="specialty">PROGRAMS</p>
-                <p class="specialty">AI</p>
-            </div>
-            <div id="clock">Loading time...</div>
-            <div class="contact-icons">
-                <a href="https://github.com/2mdipro7" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/2mdipro7" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/dipro7mufc" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="mailto:mm4mashrafi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://wa.me/+8801646302935" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html#about">About</a></li>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap nav-inner">
+            <a class="brand" href="../index.html" aria-label="Mehrab Mashrafi, home">
+                <img src="../resources/images/mylogo_dark.svg" alt="" width="34" height="34">
+                <span>Mehrab Mashrafi</span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#story">Story</a></li>
                 <li><a href="../index.html#services">Services</a></li>
-                <li><a href="../index.html#case-studies">Case Studies</a></li>
-                <li><a href="../index.html#experience">Experience</a></li>
-                <li><a href="https://calendly.com/2mdipro7" target="_blank">Book a Call</a></li>
+                <li><a href="../index.html#approach">Approach</a></li>
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#background">Background</a></li>
+                <li><a class="btn btn-primary" href="https://calendly.com/2mdipro7" target="_blank" rel="noopener">Book a call</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
-    <main>
-        <a href="../index.html#case-studies" style="color: #333; margin-left: 20px;" aria-label="Back to case studies"><i class="fas fa-arrow-left fa-2x"></i></a>
-
-        <section class="project-details">
-            <h1>LeadHarvest: Automated Lead Generation Pipeline</h1>
-            <p class="case-meta">Founder-led build at <a href="https://aibyters.com" target="_blank">AIBYTERS</a> · Process design, automation &amp; delivery</p>
-            <p class="topics">
-                <span>Process Automation</span>
-                <span>Sales Operations</span>
-                <span>Lead Scoring</span>
-                <span>Data Quality</span>
-                <span>Python</span>
-                <span>Playwright</span>
-            </p>
-        </section>
-
-        <section>
-            <h2><i class="fas fa-triangle-exclamation"></i> The Problem</h2>
-            <p>Building prospect lists by hand is slow, inconsistent, and hard to hand off. Someone searches Google Maps, opens each business website, hunts for an email or WhatsApp number, pastes it into a spreadsheet, and then guesses which leads are worth calling first. Quality depends on who did the research that day, and results skew toward whatever location the researcher's browser defaults to.</p>
-        </section>
-
-        <section>
-            <h2><i class="fas fa-user-tie"></i> My Role</h2>
-            <ul>
-                <li>Mapped the manual research process step by step and redesigned it as a standard pipeline: search → enrich → validate → score → export.</li>
-                <li>Defined the lead-quality scoring rules so that prioritization is consistent rather than a judgment call.</li>
-                <li>Designed the output around how a sales team actually works: separate lists by priority and contact channel.</li>
-                <li>Built and iterated the tool (v1 → v2) based on speed, accuracy, and reliability gaps found in real runs.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2><i class="fas fa-box-open"></i> What Was Delivered</h2>
-            <ul>
-                <li><b>Location-accurate search</b>: each city and sub-area (e.g. Gulshan, Banani) is geocoded separately, so results come from the right neighbourhood regardless of where the tool is run.</li>
-                <li><b>Contact enrichment</b>: visits each business website to collect email, Facebook, Instagram, and WhatsApp, trying a fast lightweight request before falling back to a full browser.</li>
-                <li><b>Validation</b>: worldwide phone-number validation adapted to the target country, and email filtering that removes false positives and prefers business-domain addresses.</li>
-                <li><b>0–100 lead score</b>: valid phone +30, valid email +25, real website +20, Facebook / Instagram / WhatsApp +10 each, rating ≥ 4.0 +5, 10+ reviews +5.</li>
-                <li><b>Sales-ready Excel output</b>, split into sheets: All Leads, High Priority (≥ 70), Standard (40–69), Phone Only, Email+, and Rejects (&lt; 40).</li>
-                <li><b>Two modes</b>: keyword search ("hotels in Dhaka") or a CSV of named companies to enrich an existing account list.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2><i class="fas fa-list-check"></i> How It Improved (v1 → v2)</h2>
-            <ul>
-                <li><b>3–5× faster</b>, with up to 4 browser pages running in parallel.</li>
-                <li><b>No lost work</b>: progress is checkpointed after every lead (previously every 5), and re-running the same command resumes automatically after a crash.</li>
-                <li><b>Fewer bad contacts</b>: stricter email filtering and country-aware phone validation.</li>
-                <li><b>Rate-limit safe</b>: randomized pacing between requests keeps long runs stable.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2><i class="fas fa-chart-line"></i> Results</h2>
-            <div class="results-grid">
-                <div class="result-tile"><strong>3–5×</strong><span>faster than v1</span></div>
-                <div class="result-tile"><strong>0–100</strong><span>consistent lead score</span></div>
-                <div class="result-tile"><strong>6</strong><span>sales-ready lead lists per run</span></div>
-                <div class="result-tile"><strong>4</strong><span>browser pages running in parallel</span></div>
-            </div>
-            <!-- METRIC: add real outcomes, e.g. leads generated per run, hours of manual research saved, contact rate / meetings booked from High Priority list -->
-        </section>
-
-        <section class="closing-cta">
-            <h2><i class="fas fa-handshake"></i> Need something like this for your team?</h2>
-            <p>Book a 30-minute call. We'll map the bottleneck and agree on the first practical step.</p>
-            <div class="hero-ctas">
-                <a class="cta-button primary" href="https://calendly.com/2mdipro7" target="_blank"><i class="fas fa-calendar-check icon"></i>Book a Call</a>
-                <a class="cta-button secondary dark" href="../index.html#case-studies"><i class="fas fa-briefcase icon"></i>More Case Studies</a>
+    <main id="main">
+        <section class="page-hero">
+            <div class="wrap">
+                <a class="back-link" href="../index.html#work"><i class="fas fa-arrow-left"></i>All work</a>
+                <p class="case-kicker">Founder-led build · AIBYTERS · Sales operations</p>
+                <h1>LeadHarvest: from manual prospecting to a scored pipeline</h1>
+                <p class="summary">How I turned slow, inconsistent prospect research into a standard pipeline (search, enrich, validate, score) that hands the sales team a prioritized, ready-to-call list.</p>
+                <ul class="tags"><li>Process automation</li><li>Sales operations</li><li>Lead scoring</li><li>Data quality</li><li>Python</li><li>Playwright</li></ul>
+                <div class="hero-stats">
+                    <div class="stat"><b>3–5×</b><span>faster than v1</span></div>
+                    <div class="stat"><b>0–100</b><span>consistent lead score</span></div>
+                    <div class="stat"><b>6</b><span>sales-ready lists per run</span></div>
+                    <div class="stat"><b>4</b><span>browser pages in parallel</span></div>
+                </div>
             </div>
         </section>
+
+        <div class="wrap case-layout">
+            <ul class="toc" aria-label="On this page">
+                <li><a href="#problem">The problem</a></li>
+                <li><a href="#role">My role</a></li>
+                <li><a href="#delivered">What was delivered</a></li>
+                <li><a href="#how">How it improved (v1 → v2)</a></li>
+                <li><a href="#results">Results</a></li>
+            </ul>
+            <div class="case-content">
+                <section id="problem" class="reveal">
+                    <h2><span class="n">01</span>The problem</h2>
+                    <p>Building prospect lists by hand is slow, inconsistent, and hard to hand off. Someone searches Google Maps, opens each business website, hunts for an email or WhatsApp number, pastes it into a spreadsheet, and then guesses which leads are worth calling first.</p>
+                    <p>Quality depends on who did the research that day, and results skew toward wherever the researcher's browser thinks they are.</p>
+                </section>
+                <section id="role" class="reveal">
+                    <h2><span class="n">02</span>My role</h2>
+                    <ul>
+                        <li>Mapped the manual research process step by step and redesigned it as a standard pipeline: search → enrich → validate → score → export.</li>
+                        <li>Defined the lead-quality scoring rules so that prioritization is consistent, not a judgment call.</li>
+                        <li>Designed the output around how a sales team actually works: separate lists by priority and contact channel.</li>
+                        <li>Built and iterated the tool from v1 to v2 based on speed, accuracy, and reliability gaps found in real runs.</li>
+                    </ul>
+                </section>
+                <section id="delivered" class="reveal">
+                    <h2><span class="n">03</span>What was delivered</h2>
+                    <ul>
+                        <li><b>Location-accurate search.</b> Each city and sub-area (e.g. Gulshan, Banani) is geocoded separately, so results come from the right neighbourhood wherever the tool is run.</li>
+                        <li><b>Contact enrichment.</b> Each business website is checked for email, Facebook, Instagram, and WhatsApp, with a fast lightweight request tried before a full browser.</li>
+                        <li><b>Validation.</b> Worldwide phone-number validation adapted to the target country, plus email filtering that removes false positives and prefers business domains.</li>
+                        <li><b>0–100 lead score.</b> Valid phone +30, valid email +25, real website +20, Facebook / Instagram / WhatsApp +10 each, rating ≥ 4.0 +5, 10+ reviews +5.</li>
+                        <li><b>Sales-ready Excel output</b> with separate sheets: All Leads, High Priority (≥ 70), Standard (40–69), Phone Only, Email+, and Rejects (&lt; 40).</li>
+                        <li><b>Two modes:</b> keyword search ("hotels in Dhaka") or a CSV of named companies to enrich an existing account list.</li>
+                    </ul>
+                </section>
+                <section id="how" class="reveal">
+                    <h2><span class="n">04</span>How it improved (v1 → v2)</h2>
+                    <ul>
+                        <li><b>3–5× faster</b>, with up to 4 browser pages running in parallel.</li>
+                        <li><b>No lost work.</b> Progress is checkpointed after every lead (previously every 5), and re-running the same command resumes automatically after a crash.</li>
+                        <li><b>Fewer bad contacts</b> thanks to stricter email filtering and country-aware phone validation.</li>
+                        <li><b>Stable long runs.</b> Randomized pacing between requests avoids rate limits.</li>
+                    </ul>
+                </section>
+                <section id="results" class="reveal">
+                    <h2><span class="n">05</span>Results</h2>
+                    <div class="results">
+                        <div class="tile"><b>3–5×</b><span>faster than v1</span></div>
+                        <div class="tile"><b>0–100</b><span>consistent lead score</span></div>
+                        <div class="tile"><b>6</b><span>sales-ready lists per run</span></div>
+                        <div class="tile"><b>4</b><span>browser pages in parallel</span></div>
+                    </div>
+                    <p class="callout">The real win is operational: prospecting went from a skill that lived in one person's head to a repeatable process anyone on the team can run.</p>
+                </section>
+                <!-- METRIC: add real outcomes, e.g. leads per run, hours of manual research saved, meetings booked from High Priority list -->
+                <a class="next-case" href="visual-intelligence-library.html">
+                    <span><small>Next case study</small><b>Visual Intelligence Library: one standard for every report</b></span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <section class="wrap" style="margin-bottom:40px">
+            <div class="cta-panel reveal">
+                <span class="chapter-num" style="color:var(--brand-bright)">Want this for your team?</span>
+                <h2>Let's find the bottleneck in your operations.</h2>
+                <p class="chapter-lead">A 30-minute call is enough to map where work gets stuck and agree on a practical first step.</p>
+                <div class="hero-ctas">
+                    <a class="btn btn-light" href="https://calendly.com/2mdipro7" target="_blank" rel="noopener"><i class="fas fa-calendar-check"></i>Book a call</a>
+                    <a class="btn btn-outline-light" href="mailto:mm4mashrafi@gmail.com"><i class="fas fa-envelope"></i>Email me</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 Mehrab Mashrafi · Business Operations &amp; Program Manager</p>
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <div>
+                <div>&copy; 2026 Mehrab Mashrafi · Business Operations &amp; Program Manager</div>
+                <div id="clock" aria-live="off"></div>
+            </div>
+            <ul class="socials">
+                <li><a href="https://www.linkedin.com/in/2mdipro7" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://github.com/2mdipro7" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://twitter.com/dipro7mufc" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://wa.me/+8801646302935" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="mailto:mm4mashrafi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div>
     </footer>
-    <script src="../js/clock.js">
-    </script>
+
+    <script src="../js/site.js"></script>
+    <script src="../js/clock.js"></script>
 </body>
 </html>
