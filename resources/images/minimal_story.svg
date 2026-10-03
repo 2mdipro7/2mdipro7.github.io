@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <rect width="1200" height="675" fill="#10201b"/>
+  <g stroke="#8fb49a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+    <path d="M380,340 Q435,270 490,340 T600,340 T710,340 T820,340"/>
+    <path d="M410,340 Q455,295 500,340 T600,340 T700,340 T790,340" opacity="0.6"/>
+    <path d="M440,340 Q475,315 510,340 T600,340 T690,340 T760,340" opacity="0.35"/>
+    <circle cx="600" cy="340" r="4" fill="#8fb49a"/>
+  </g>
+  <text x="600" y="440" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="22" font-weight="600" fill="#8fb49a" letter-spacing="4">NLP CLASSIFICATION</text>
+  <text x="600" y="468" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="12" font-weight="500" fill="#5d6d67" letter-spacing="3">MULTI-LABEL TEXT INTELLIGENCE</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <rect width="1200" height="675" fill="#10201b"/>
+  <g stroke="#8fb49a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+    <path d="M420,380 C470,310 540,260 600,260 C660,260 730,310 780,380"/>
+    <path d="M460,370 C510,320 560,285 600,285 C640,285 690,320 740,370"/>
+    <path d="M500,360 C540,330 575,310 600,310 C625,310 660,330 700,360"/>
+    <line x1="600" y1="260" x2="600" y2="390"/>
+    <circle cx="600" cy="248" r="4" fill="#8fb49a"/>
+    <circle cx="420" cy="380" r="3" fill="#8fb49a"/>
+    <circle cx="780" cy="380" r="3" fill="#8fb49a"/>
+  </g>
+  <text x="600" y="470" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="22" font-weight="600" fill="#8fb49a" letter-spacing="4">AVIAN ODYSSEY</text>
+  <text x="600" y="498" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="12" font-weight="500" fill="#5d6d67" letter-spacing="3">TAXONOMIC AI CLASSIFICATION</text>
+</svg>

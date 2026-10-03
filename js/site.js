@@ -172,4 +172,31 @@
             updateFit();
         });
     });
+
+    // Filter projects by category
+    var filterBtns = document.querySelectorAll('.filter-btn');
+    var projectCards = document.querySelectorAll('.project-card');
+    if (filterBtns.length && projectCards.length) {
+        filterBtns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var filter = btn.getAttribute('data-filter');
+                filterBtns.forEach(function (b) {
+                    b.classList.remove('is-active');
+                    b.setAttribute('aria-selected', 'false');
+                });
+                btn.classList.add('is-active');
+                btn.setAttribute('aria-selected', 'true');
+
+                projectCards.forEach(function (card) {
+                    var cat = card.getAttribute('data-category');
+                    if (filter === 'all' || cat === filter) {
+                        card.classList.remove('is-hidden');
+                        card.classList.add('is-visible');
+                    } else {
+                        card.classList.add('is-hidden');
+                    }
+                });
+            });
+        });
+    }
 })();

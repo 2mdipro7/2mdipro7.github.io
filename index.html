@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=20260927d">
+    <link rel="stylesheet" href="style.css?v=20261004">
     <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -409,75 +409,225 @@
             <div class="wrap">
                 <div class="chapter-head reveal">
                     <span class="chapter-num">More work · Data &amp; AI</span>
-                    <h2>The hands-on side.</h2>
-                    <p class="chapter-lead">Analytics, data engineering, and machine learning projects. They're why I can talk to data teams in their own language and challenge a number before it reaches leadership.</p>
+                    <h2>Technical depth meets business execution.</h2>
+                    <p class="chapter-lead">Every data, machine learning, and analytics project I've built is rooted in solving a concrete operational or commercial problem. They're why I can translate leadership strategy into technical architecture and challenge a number before it reaches the board.</p>
                 </div>
-                <div class="work-grid">
-                    <article class="work reveal">
-                        <span class="work-type">Program M&amp;E · Data quality</span>
-                        <h3>Education Program Metrics Pipeline</h3>
-                        <p>Can a program manager trust the data behind "is this program working?" 12,246 field records, 58 automated data checks per run, and a live KPI dashboard.</p>
-                        <ul class="tags"><li>ETL</li><li>MongoDB</li><li>Streamlit</li></ul>
-                        <div class="work-links">
-                            <a href="https://tanzania-education-pipeline-vmpnvhngvqdisvuz3kcc9d.streamlit.app/" target="_blank" rel="noopener"><i class="fas fa-chart-simple"></i>Live dashboard</a>
-                            <a href="https://github.com/2mdipro7/tanzania-education-pipeline" target="_blank" rel="noopener"><i class="fab fa-github"></i>Code</a>
-                        </div>
-                    </article>
-                    <article class="work reveal">
-                        <span class="work-type">Process maturity · Pricing</span>
-                        <h3>Embroidery Industry Pricing Diagnostics</h3>
-                        <p>Shops with a formalized pricing system charge about $67/hour more than those pricing on gut feel. The fix is process, not calculators.</p>
-                        <ul class="tags"><li>Survey analytics</li><li>Segmentation</li><li>LLM text analysis</li></ul>
-                        <div class="work-links">
-                            <a href="https://github.com/2mdipro7/embroidery-pricing-analytics" target="_blank" rel="noopener"><i class="fab fa-github"></i>Code &amp; findings</a>
-                        </div>
-                    </article>
-                    <article class="work reveal">
-                        <span class="work-type">Bottleneck analysis · UX</span>
-                        <h3>Ecommerce UX Funnel Audit</h3>
-                        <p>Across 490,398 sessions, the biggest leak wasn't checkout: only 8.45% of product-page visits added to cart. A propensity model (98.46% ROC AUC) turned that into a UX review queue.</p>
-                        <ul class="tags"><li>Product analytics</li><li>Statistics</li><li>ML</li></ul>
-                        <div class="work-links">
-                            <a href="https://github.com/2mdipro7/ecommerce-ux-funnel-audit" target="_blank" rel="noopener"><i class="fab fa-github"></i>Code &amp; findings</a>
-                        </div>
-                    </article>
+
+                <!-- Interactive Filter Bar -->
+                <div class="project-filter-bar reveal" role="tablist" aria-label="Filter projects by domain">
+                    <button type="button" class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">
+                        <span>All Initiatives</span> <span class="filter-count">7</span>
+                    </button>
+                    <button type="button" class="filter-btn" data-filter="market-pricing" role="tab" aria-selected="false">
+                        <span>Market &amp; Pricing Intelligence</span> <span class="filter-count">2</span>
+                    </button>
+                    <button type="button" class="filter-btn" data-filter="applied-ai" role="tab" aria-selected="false">
+                        <span>Applied AI &amp; Automation</span> <span class="filter-count">3</span>
+                    </button>
+                    <button type="button" class="filter-btn" data-filter="operations-analytics" role="tab" aria-selected="false">
+                        <span>Operations &amp; Product Analytics</span> <span class="filter-count">2</span>
+                    </button>
                 </div>
-                <h3 class="sub-head reveal">Earlier data science &amp; ML projects</h3>
-                <div class="work-grid four">
-                    <article class="work reveal">
-                        <span class="work-type">Market analysis · BI</span>
-                        <h3>UAE Real Estate Market Analysis</h3>
-                        <p>Scraped and normalized property listings, geocoded every property, and delivered interactive Tableau dashboards on the market and agent performance.</p>
-                        <ul class="tags"><li>Data modeling</li><li>GIS</li><li>Tableau</li></ul>
-                        <div class="work-links">
-                            <a href="projects/real-estate-uae.html">Project details <i class="fas fa-arrow-right"></i></a>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project 1: UAE Real Estate -->
+                    <article class="project-card reveal" data-category="market-pricing">
+                        <div class="project-card-media">
+                            <img src="resources/images/minimal_real_estate.jpg" alt="UAE Real Estate Market Intelligence" loading="lazy" width="600" height="340">
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-track">Market Intelligence · Real Estate</span>
+                            <h3 class="project-title"><a href="projects/real-estate-uae.html">UAE Real Estate Market Analysis</a></h3>
+                            <p class="project-desc">Standardized fragmented property data across the UAE into executive Tableau dashboards, establishing geospatial rental yield benchmarks and agent sales accountability.</p>
+                            <div class="mini-stats">
+                                <div><b>2</b><span>BI dashboards</span></div>
+                                <div><b>GIS</b><span>spatial yield mapping</span></div>
+                            </div>
+                            <ul class="tags">
+                                <li>Tableau</li>
+                                <li>Python ETL</li>
+                                <li>GIS</li>
+                                <li>Market BI</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a class="link-arrow" href="projects/real-estate-uae.html">Project details <i class="fas fa-arrow-right"></i></a>
+                                <div class="project-ext-links">
+                                    <a href="https://public.tableau.com/app/profile/mehrab.mashrafi/viz/RealEstateMarketAnalysisofUAE/PropertyInsights?publish=yes" target="_blank" rel="noopener"><i class="fas fa-chart-bar"></i> Tableau</a>
+                                    <a href="https://github.com/2mdipro7/Real-Estate-Market-Analysis-UAE" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
                         </div>
                     </article>
-                    <article class="work reveal">
-                        <span class="work-type">Computer vision</span>
-                        <h3>Mammal World</h3>
-                        <p>An image model that identifies mammal species of the Indian subcontinent to support conservation work.</p>
-                        <ul class="tags"><li>Deep learning</li><li>Computer vision</li></ul>
-                        <div class="work-links">
-                            <a href="projects/mammal-world.html">Project details <i class="fas fa-arrow-right"></i></a>
+
+                    <!-- Project 2: Mammal World -->
+                    <article class="project-card reveal" data-category="applied-ai">
+                        <div class="project-card-media">
+                            <img src="resources/images/minimal_mammal.jpg" alt="Mammal World AI Conservation" loading="lazy" width="600" height="340">
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-track">Applied AI · Biodiversity Operations</span>
+                            <h3 class="project-title"><a href="projects/mammal-world.html">Mammal World: Wildlife AI Platform</a></h3>
+                            <p class="project-desc">Engineered a multi-target transfer-learning classifier for 103 native species of the Indian subcontinent, deploying interactive web apps to accelerate conservation field reporting.</p>
+                            <div class="mini-stats">
+                                <div><b>99%</b><span>accuracy</span></div>
+                                <div><b>103</b><span>species classified</span></div>
+                            </div>
+                            <ul class="tags">
+                                <li>Computer Vision</li>
+                                <li>ResNet101</li>
+                                <li>Streamlit</li>
+                                <li>Fastai</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a class="link-arrow" href="projects/mammal-world.html">Project details <i class="fas fa-arrow-right"></i></a>
+                                <div class="project-ext-links">
+                                    <a href="https://mammal-world.streamlit.app/" target="_blank" rel="noopener"><i class="fas fa-laptop-code"></i> Live App</a>
+                                    <a href="https://github.com/2mdipro7/mammal-world" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
                         </div>
                     </article>
-                    <article class="work reveal">
-                        <span class="work-type">Computer vision</span>
-                        <h3>Avian Odyssey</h3>
-                        <p>Collected images of birds across all 42 orders of the Aves class and trained a ResNet101 transfer-learning classifier.</p>
-                        <ul class="tags"><li>Transfer learning</li><li>Data collection</li></ul>
-                        <div class="work-links">
-                            <a href="projects/aves-order-classifier.html">Project details <i class="fas fa-arrow-right"></i></a>
+
+                    <!-- Project 3: Avian Odyssey -->
+                    <article class="project-card reveal" data-category="applied-ai">
+                        <div class="project-card-media">
+                            <img src="resources/images/minimal_avian.svg" alt="Avian Odyssey AI Bird Classification" loading="lazy" width="600" height="340">
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-track">Computer Vision · Taxonomy Pipeline</span>
+                            <h3 class="project-title"><a href="projects/aves-order-classifier.html">Avian Odyssey: 42-Order Classification</a></h3>
+                            <p class="project-desc">Built an automated image ingestion, cleaning, and augmentation pipeline across all 42 biological orders of class Aves, eliminating manual specimen sorting bottlenecks.</p>
+                            <div class="mini-stats">
+                                <div><b>42</b><span>orders classified</span></div>
+                                <div><b>101</b><span>ResNet layers</span></div>
+                            </div>
+                            <ul class="tags">
+                                <li>Transfer Learning</li>
+                                <li>ResNet101</li>
+                                <li>Computer Vision</li>
+                                <li>Python</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a class="link-arrow" href="projects/aves-order-classifier.html">Project details <i class="fas fa-arrow-right"></i></a>
+                                <div class="project-ext-links">
+                                    <a href="https://2mdipro7.github.io/aves-order-classifier/" target="_blank" rel="noopener"><i class="fas fa-window-maximize"></i> Web App</a>
+                                    <a href="https://github.com/2mdipro7/aves-order-classifier" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
                         </div>
                     </article>
-                    <article class="work reveal">
-                        <span class="work-type">NLP</span>
-                        <h3>Story Genre Classification</h3>
-                        <p>A multi-label transformer model that predicts story genres from fan-fiction descriptions, deployed as a web app.</p>
-                        <ul class="tags"><li>Transformers</li><li>NLP</li><li>Deployment</li></ul>
-                        <div class="work-links">
-                            <a href="projects/story-genre-classifier.html">Project details <i class="fas fa-arrow-right"></i></a>
+
+                    <!-- Project 4: Story Genre Classification -->
+                    <article class="project-card reveal" data-category="applied-ai">
+                        <div class="project-card-media">
+                            <img src="resources/images/minimal_story.svg" alt="Story Genre NLP Classification" loading="lazy" width="600" height="340">
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-track">Content Operations · NLP Automation</span>
+                            <h3 class="project-title"><a href="projects/story-genre-classifier.html">Story Genre Classification with Transformers</a></h3>
+                            <p class="project-desc">Automated content scraping and trained multi-label transformer models on raw text descriptions, deploying real-time inference to automate uncurated content categorization at scale.</p>
+                            <div class="mini-stats">
+                                <div><b>NLP</b><span>multi-label tagging</span></div>
+                                <div><b>Live</b><span>web deployment</span></div>
+                            </div>
+                            <ul class="tags">
+                                <li>Transformers</li>
+                                <li>NLP</li>
+                                <li>Fastai</li>
+                                <li>Hugging Face</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a class="link-arrow" href="projects/story-genre-classifier.html">Project details <i class="fas fa-arrow-right"></i></a>
+                                <div class="project-ext-links">
+                                    <a href="https://story-genre-classifier.onrender.com/" target="_blank" rel="noopener"><i class="fas fa-laptop-code"></i> Live App</a>
+                                    <a href="https://github.com/2mdipro7/story-genre-classifier" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Education Program Metrics Pipeline -->
+                    <article class="project-card reveal" data-category="operations-analytics">
+                        <div class="project-card-media">
+                            <img src="resources/images/minimal_pipeline.jpg" alt="Education Program Metrics Pipeline" loading="lazy" width="600" height="340">
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-track">Program M&amp;E · Data Governance</span>
+                            <h3 class="project-title"><a href="https://tanzania-education-pipeline-vmpnvhngvqdisvuz3kcc9d.streamlit.app/" target="_blank" rel="noopener">Education Program Metrics Pipeline</a></h3>
+                            <p class="project-desc">Designed an automated ETL ingestion pipeline with 58 integrity checks per run and live telemetry, giving leadership audit-ready confidence across 12,246 field records.</p>
+                            <div class="mini-stats">
+                                <div><b>12.2K</b><span>field records</span></div>
+                                <div><b>58</b><span>data QA rules/run</span></div>
+                            </div>
+                            <ul class="tags">
+                                <li>Program M&amp;E</li>
+                                <li>ETL</li>
+                                <li>MongoDB</li>
+                                <li>Streamlit</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a class="link-arrow" href="https://tanzania-education-pipeline-vmpnvhngvqdisvuz3kcc9d.streamlit.app/" target="_blank" rel="noopener">Live dashboard <i class="fas fa-arrow-right"></i></a>
+                                <div class="project-ext-links">
+                                    <a href="https://github.com/2mdipro7/tanzania-education-pipeline" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6: Embroidery Industry Pricing Diagnostics -->
+                    <article class="project-card reveal" data-category="market-pricing">
+                        <div class="project-card-media">
+                            <img src="resources/images/minimal_pricing.jpg" alt="Manufacturing Pricing Diagnostics" loading="lazy" width="600" height="340">
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-track">Pricing Operations · Margin Strategy</span>
+                            <h3 class="project-title"><a href="https://github.com/2mdipro7/embroidery-pricing-analytics" target="_blank" rel="noopener">Manufacturing Pricing Diagnostics</a></h3>
+                            <p class="project-desc">Diagnosed quoting bottlenecks across custom embroidery shops, proving formalized pricing systems capture +$67/hour more than gut-feel quotes, and synthesized findings into SOPs.</p>
+                            <div class="mini-stats">
+                                <div><b>+$67</b><span>/hr margin delta</span></div>
+                                <div><b>SOP</b><span>pricing system</span></div>
+                            </div>
+                            <ul class="tags">
+                                <li>Pricing Strategy</li>
+                                <li>Survey Analytics</li>
+                                <li>Segmentation</li>
+                                <li>LLM Analysis</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a class="link-arrow" href="https://github.com/2mdipro7/embroidery-pricing-analytics" target="_blank" rel="noopener">Findings &amp; code <i class="fas fa-arrow-right"></i></a>
+                                <div class="project-ext-links">
+                                    <a href="https://github.com/2mdipro7/embroidery-pricing-analytics" target="_blank" rel="noopener"><i class="fab fa-github"></i> Repo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 7: Ecommerce UX Funnel Audit -->
+                    <article class="project-card reveal" data-category="operations-analytics">
+                        <div class="project-card-media">
+                            <img src="resources/images/minimal_funnel.jpg" alt="Ecommerce UX Funnel Audit" loading="lazy" width="600" height="340">
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-track">Revenue Operations · Funnel Analytics</span>
+                            <h3 class="project-title"><a href="https://github.com/2mdipro7/ecommerce-ux-funnel-audit" target="_blank" rel="noopener">Ecommerce UX Funnel Audit</a></h3>
+                            <p class="project-desc">Audited 490,398 sessions to isolate the primary conversion leak (8.45% product-page to cart) and trained a 98.46% AUC propensity model to guide high-leverage UX review sprints.</p>
+                            <div class="mini-stats">
+                                <div><b>490K</b><span>sessions audited</span></div>
+                                <div><b>98.5%</b><span>AUC propensity</span></div>
+                            </div>
+                            <ul class="tags">
+                                <li>Product Analytics</li>
+                                <li>Propensity ML</li>
+                                <li>Funnel Optimization</li>
+                                <li>Statistics</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a class="link-arrow" href="https://github.com/2mdipro7/ecommerce-ux-funnel-audit" target="_blank" rel="noopener">Findings &amp; code <i class="fas fa-arrow-right"></i></a>
+                                <div class="project-ext-links">
+                                    <a href="https://github.com/2mdipro7/ecommerce-ux-funnel-audit" target="_blank" rel="noopener"><i class="fab fa-github"></i> Repo</a>
+                                </div>
+                            </div>
                         </div>
                     </article>
                 </div>
@@ -636,7 +786,7 @@
         </div>
     </footer>
 
-    <script src="js/site.js?v=20260927d"></script>
+    <script src="js/site.js?v=20261004"></script>
     <script src="js/clock.js?v=20260927d"></script>
 </body>
 </html>
