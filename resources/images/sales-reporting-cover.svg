@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Sales reporting: from 12 working days to 10 minutes</title>
+  <desc id="desc">The reporting turnaround published in Mehrab's portfolio, shown with a before-and-after timeline and an illustrative management reporting panel. The panel is a diagram, not a dashboard screenshot.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#102d25"/><stop offset="1" stop-color="#234a36"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#09c199" stop-opacity=".22"/><stop offset="1" stop-color="#09c199" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="950" cy="235" r="400" fill="url(#glow)"/>
+  <path d="M900 0v800M1000 0v800M1100 0v800M0 100h1200M0 200h1200" stroke="#fff" stroke-opacity=".035"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="64" y="81" fill="#91dfc7" font-size="26" font-weight="700" letter-spacing="4">SALES REPORTING · PROCESS IMPROVEMENT</text>
+    <text x="60" y="181" fill="#fff" font-size="85" font-weight="800" letter-spacing="-3">12 working days</text>
+    <text x="64" y="271" fill="#80f0c7" font-size="100" font-weight="800" letter-spacing="-3">→ 10 minutes.</text>
+    <text x="64" y="325" fill="#c0d9cd" font-size="30">Automated preparation. Management reporting.</text>
+    <rect x="64" y="376" width="1072" height="320" rx="24" fill="#f5faf7"/>
+    <text x="100" y="426" fill="#1c3a30" font-size="24" font-weight="700" letter-spacing="2">BEFORE → AFTER</text>
+    <text x="100" y="475" fill="#426456" font-size="24">Manual reporting</text>
+    <rect x="100" y="494" width="440" height="20" rx="10" fill="#acc7b9"/>
+    <text x="100" y="566" fill="#1c3a30" font-size="24" font-weight="700">Automated reporting</text>
+    <circle cx="110" cy="597" r="10" fill="#0b8f73"/>
+    <path d="M133 597h407" stroke="#d4e2d9" stroke-width="2" stroke-dasharray="6 6"/>
+    <text x="100" y="657" fill="#426456" font-size="21">Turnaround comparison · not to scale</text>
+    <path d="M586 410v250" stroke="#d4e2d9"/>
+    <rect x="622" y="410" width="478" height="252" rx="15" fill="#e1f1e8"/>
+    <text x="650" y="454" fill="#1c3a30" font-size="27" font-weight="700">Management view</text>
+    <g fill="#426456" font-size="24"><text x="650" y="505">Sales by period</text><text x="650" y="558">Product performance</text><text x="650" y="611">Regional performance</text></g>
+    <g fill="#0b8f73"><rect x="989" y="487" width="83" height="19" rx="4"/><rect x="1011" y="540" width="61" height="19" rx="4"/><rect x="997" y="593" width="75" height="19" rx="4"/></g>
+    <text x="64" y="753" fill="#b0d1c2" font-size="21" letter-spacing="2">ILLUSTRATIVE REPORTING VIEW</text>
+    <text x="1136" y="753" text-anchor="end" fill="#91dfc7" font-size="21" letter-spacing="2">03 / REPORTING</text>
+  </g>
+</svg>
