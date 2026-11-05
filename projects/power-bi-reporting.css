@@ -7,6 +7,7 @@
 .reporting-case .study-lead{max-width:720px;font-size:clamp(18px,2vw,21px);line-height:1.65;color:#526257}
 .cover-art{margin:0;background:var(--deep);border-radius:6px;overflow:hidden}
 .cover-art img{display:block;width:100%;height:auto}
+.reporting-case .hero-video{margin:0 0 24px}.reporting-case .hero-video video{display:block;width:100%;aspect-ratio:16/9;background:var(--deep);border:1px solid var(--rule);border-radius:6px;object-fit:contain}.reporting-case .hero-video figcaption{max-width:80ch;margin-top:12px;color:var(--soft);font-size:12px;line-height:1.7}.reporting-case .hero-video figcaption a{color:var(--dark);text-underline-offset:3px}
 .reporting-case .study-facts{grid-template-columns:1.1fr 1.6fr 1fr;margin:0;padding:26px 0 30px;gap:36px;border-top:0}
 .reporting-case .study-facts dt{font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:#5d6a5e}
 .reporting-case .study-facts dd{font-size:14px;line-height:1.65;margin-top:9px}
