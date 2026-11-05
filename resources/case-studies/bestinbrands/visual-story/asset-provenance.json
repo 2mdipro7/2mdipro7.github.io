@@ -1,0 +1,50 @@
+{
+  "tool": "Built-in imagegen",
+  "exports": "4K masters are upscaled from preserved generated originals. Responsive WebP exports are provided for page delivery.",
+  "assets": {
+    "before": {
+      "sourceDimensions": [
+        1672,
+        941
+      ],
+      "masterDimensions": [
+        3840,
+        2160
+      ],
+      "masterUpscaled": true
+    },
+    "after": {
+      "sourceDimensions": [
+        1672,
+        941
+      ],
+      "masterDimensions": [
+        3840,
+        2160
+      ],
+      "masterUpscaled": true
+    },
+    "before-mobile": {
+      "sourceDimensions": [
+        941,
+        1672
+      ],
+      "masterDimensions": [
+        2160,
+        3840
+      ],
+      "masterUpscaled": true
+    },
+    "after-mobile": {
+      "sourceDimensions": [
+        941,
+        1672
+      ],
+      "masterDimensions": [
+        2160,
+        3840
+      ],
+      "masterUpscaled": true
+    }
+  }
+}
