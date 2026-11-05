@@ -1045,7 +1045,11 @@ p {
     display: block;
     border-radius: 17px 17px 0 0;
     background: var(--brand-deep);
+    overflow: hidden;
+    padding: 0;
 }
+
+.featured-cover img { display: block; width: 100%; height: 100%; object-fit: contain; }
 
 .featured-body {
     display: flex;
