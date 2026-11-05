@@ -1,0 +1,28 @@
+{
+  "assets": [
+    {
+      "name": "before-v2",
+      "nativeDimensions": [
+        3840,
+        2160
+      ],
+      "upscaled": false,
+      "provider": "Higgsfield",
+      "model": "gpt_image_2_6"
+    },
+    {
+      "name": "before-v2-mobile",
+      "nativeDimensions": [
+        2160,
+        3840
+      ],
+      "upscaled": false,
+      "provider": "Higgsfield",
+      "model": "gpt_image_2_6"
+    }
+  ],
+  "jobs": [
+    "c47b9ac1-51ec-4364-aa25-594d74a09243",
+    "2177043a-4fe0-491c-a470-15d129db5fb2"
+  ]
+}
